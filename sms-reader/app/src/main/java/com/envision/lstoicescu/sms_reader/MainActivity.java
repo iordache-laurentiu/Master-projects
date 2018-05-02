@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.item1:
                 Toast.makeText(getApplicationContext(), "S-a apăsat item1", Toast.LENGTH_LONG).show();
-                showAlertDialogMessageClicked();
+                showAlertDialogBox(1);
                 break;
             case R.id.item2:
                 Toast.makeText(getApplicationContext(), "S-a apăsat item1", Toast.LENGTH_LONG).show();
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    public void showAlertDialogMessageClicked() {
+    public void showAlertDialogBox(long id) {
         AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
         builder1.setMessage(getString(R.string.DIALOG_POSITIVE_RESPONSE));
         builder1.setCancelable(true);
