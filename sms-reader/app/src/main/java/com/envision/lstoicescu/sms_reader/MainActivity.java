@@ -1,10 +1,8 @@
 package com.envision.lstoicescu.sms_reader;
 
 import android.Manifest;
-import android.app.AlertDialog;
-import android.app.ListActivity;
-import android.content.DialogInterface;
 import android.content.pm.PackageManager;
+import android.speech.tts.TextToSpeech;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -25,8 +23,7 @@ import com.envision.lstoicescu.sms_reader.controller.SmsController;
 import com.envision.lstoicescu.sms_reader.dto.SmsPOJO;
 import com.envision.lstoicescu.sms_reader.utils.DialogBox;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,44 +33,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         PermissionController.getInstance().readSmsPermission(this);
         SmsController.getInstance().populate(this);
-        registerClickCallback();
+        addOnListItemClickedEvent();
         populateListView();
+        createtts();
     }
 
-    private void requestPermission() {
-        int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_SMS);
-        if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
-            if (ContextCompat.checkSelfPermission(this,
-                    Manifest.permission.READ_SMS)
-                    != PackageManager.PERMISSION_GRANTED) {
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                        Manifest.permission.READ_SMS)) {
-                } else {
-                    ActivityCompat.requestPermissions(this,
-                            new String[]{Manifest.permission.READ_SMS},
-                            1);
-                }
-            }
-        }
-    }
-
-    private void populateListView() {
-        ArrayAdapter<SmsPOJO> adaptor = new MyListAdapter();
-        ListView list = (ListView) findViewById(R.id.list);
-        list.setAdapter(adaptor);
-    }
-
-    private void registerClickCallback() {
-        ListView list = (ListView) findViewById(R.id.list);
-//        list.setOnClickListener(); toata lista inregistreaza un click;
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
-                Toast.makeText(MainActivity.this, "Heh, lol", Toast.LENGTH_LONG).show();
-            }
-        }); // listener pentru elementele listei
-    }
-
+    //--------------------- Menu ---------------------
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the main_menu;
@@ -94,17 +59,40 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    private class MyListAdapter extends ArrayAdapter<SmsPOJO>{
-        public MyListAdapter(){
+    private void populateListView() {
+        ArrayAdapter<SmsPOJO> adaptor = new MyListAdapter();
+        ListView list = (ListView) findViewById(R.id.list);
+        list.setAdapter(adaptor);
+    }
+
+    //--------------------- List ---------------------
+
+    private void addOnListItemClickedEvent() {
+        ListView list = (ListView) findViewById(R.id.list);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
+                SmsPOJO sms = SmsController.getInstance().getSmsList().get(position);
+                Toast.makeText(MainActivity.this, sms.getMessage(), Toast.LENGTH_LONG).show();
+                ConvertTextToSpeech(sms.getMessage());
+
+            }
+        });
+    }
+
+    private class MyListAdapter extends ArrayAdapter<SmsPOJO> {
+        public MyListAdapter() {
             super(MainActivity.this, R.layout.sms_item, SmsController.getInstance().getSmsList());
         }
 
         @Override
-        public View getView(int position, View convertView, ViewGroup parent){
+        public View getView(int position, View convertView, ViewGroup parent) {
             View itemView = convertView;
-            if(itemView == null){
+            if (itemView == null) {
                 itemView = getLayoutInflater().inflate(R.layout.sms_item, parent, false);
             }
+
             // Find the sms
             SmsPOJO sms = SmsController.getInstance().getSmsList().get(position);
 
@@ -118,6 +106,55 @@ public class MainActivity extends AppCompatActivity {
             date.setText(sms.getDate());
 
             return itemView;
+        }
+    }
+
+    //
+
+    TextToSpeech tts;
+
+    protected void createtts() {
+
+        tts = new TextToSpeech(MainActivity.this, new TextToSpeech.OnInitListener() {
+
+            @Override
+            public void onInit(int status) {
+                // TODO Auto-generated method stub
+                if (status == TextToSpeech.SUCCESS) {
+                    int result = tts.setLanguage(Locale.US);
+                    if (result == TextToSpeech.LANG_MISSING_DATA ||
+                            result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                        Log.e("error", "This Language is not supported");
+                    } else {
+                        ConvertTextToSpeech("Fuck off");
+                    }
+                } else
+                    Log.e("error", "Initilization Failed!");
+            }
+        });
+
+
+    }
+
+    @Override
+    protected void onPause() {
+        // TODO Auto-generated method stub
+        if (tts != null) {
+            tts.stop();
+            tts.shutdown();
+        }
+        super.onPause();
+    }
+
+
+    private void ConvertTextToSpeech(String text) {
+        // TODO Auto-generated method stub
+        if (text == null || "".equals(text)) {
+            text = "Content not available";
+            tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+        } else {
+            tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+            Log.d("PLM", "De ce nu merge>>???");
         }
     }
 }

@@ -29,8 +29,8 @@
         android:id="@+id/item_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/item_sender"
         android:layout_alignBottom="@+id/item_sender"
         android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
         android:text="TextView" />
 </RelativeLayout>
