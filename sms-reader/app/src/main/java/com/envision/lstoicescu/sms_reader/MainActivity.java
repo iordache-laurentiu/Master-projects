@@ -8,36 +8,41 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.envision.lstoicescu.sms_reader.dto.SmsPOJO;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
+    List<SmsPOJO> smsList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        String[] test = {"Message 1", "Message 2", "Message 3"};
         popList();
         registerClickCallback();
+        populateListView();
 
     }
 
     private void popList() {
-        String[] msg = {"Message 1", "Message 2", "Message 3"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                this,        // context
-                R.layout.sms_item,  // layout to use (create)
-                msg                 // Items to be displayed
-        );
-        ListView list = (ListView) findViewById(R.id.list);
-        list.setAdapter(adapter);
+        smsList.add(new SmsPOJO("Laur", "Buna, ce faci?","26/08/1994"));
+        smsList.add(new SmsPOJO("Andrei", "Inchide, te sun eu","26/06/2000"));
     }
 
+    private void populateListView() {
+        ArrayAdapter<SmsPOJO> adaptor = new MyListAdapter();
+        ListView list = (ListView) findViewById(R.id.list);
+        list.setAdapter(adaptor);
+    }
 
     private void registerClickCallback() {
         ListView list = (ListView) findViewById(R.id.list);
@@ -45,9 +50,7 @@ public class MainActivity extends AppCompatActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
-                TextView textView = (TextView) viewClicked;
-                String msg = "You clicked position " + position + " which is string: " + textView.getText().toString();
-                Toast.makeText(MainActivity.this, msg, Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Heh, lol", Toast.LENGTH_LONG).show();
             }
         }); // listener pentru elementele listei
     }
@@ -105,5 +108,32 @@ public class MainActivity extends AppCompatActivity {
 
         AlertDialog alert11 = builder1.create();
         alert11.show();
+    }
+
+    private class MyListAdapter extends ArrayAdapter<SmsPOJO>{
+        public MyListAdapter(){
+            super(MainActivity.this, R.layout.sms_item, smsList);
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent){
+            View itemView = convertView;
+            if(itemView == null){
+                itemView = getLayoutInflater().inflate(R.layout.sms_item, parent, false);
+            }
+            // Find the sms
+            SmsPOJO sms = smsList.get(position);
+
+            // Fill the view
+            TextView sender = (TextView) itemView.findViewById(R.id.item_sender);
+            TextView message = (TextView) itemView.findViewById(R.id.item_messagePreview);
+            TextView date = (TextView) itemView.findViewById(R.id.item_date);
+
+            sender.setText(sms.getSender());
+            message.setText(sms.getMessage());
+            date.setText(sms.getDate());
+
+            return itemView;
+        }
     }
 }
