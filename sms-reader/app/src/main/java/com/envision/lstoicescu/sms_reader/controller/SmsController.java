@@ -7,11 +7,14 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.text.format.DateFormat;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.envision.lstoicescu.sms_reader.dto.SmsPOJO;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import static java.security.AccessController.getContext;
@@ -35,27 +38,26 @@ public class SmsController {
         return singleton;
     }
 
-    public void populate(Context context){
-
-
+    public void populate(Context context) {
         // get messages from phone.
-        List<String> sms = new ArrayList<String>();
         Uri uriSMSURI = Uri.parse("content://sms/inbox");
         Cursor cur = context.getContentResolver().query(uriSMSURI, null, null, null, null);
 
         while (cur != null && cur.moveToNext()) {
-            String address = cur.getString(cur.getColumnIndex("address"));
-            String body = cur.getString(cur.getColumnIndexOrThrow("body"));
-            sms.add("Number: " + address + " .Message: " + body);
-            Toast.makeText(context.getApplicationContext(), body, Toast.LENGTH_LONG).show();
+            String sender = cur.getString(cur.getColumnIndex("address"));
+            String message = cur.getString(cur.getColumnIndexOrThrow("body"));
+            long millisecond = Long.parseLong(cur.getString(cur.getColumnIndex("date")));
+            String date = DateFormat.format("MM/dd/yyyy", new Date(millisecond)).toString();
 
+            smsList.add(new SmsPOJO(sender, message, date));
         }
 
         if (cur != null) {
             cur.close();
         }
-//        return sms;
     }
 
-
+    public List<SmsPOJO> getSmsList() {
+        return smsList;
+    }
 }

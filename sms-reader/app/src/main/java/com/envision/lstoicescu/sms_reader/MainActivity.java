@@ -9,6 +9,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,6 +20,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.envision.lstoicescu.sms_reader.controller.PermissionController;
 import com.envision.lstoicescu.sms_reader.controller.SmsController;
 import com.envision.lstoicescu.sms_reader.dto.SmsPOJO;
 import com.envision.lstoicescu.sms_reader.utils.DialogBox;
@@ -27,13 +29,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    List<SmsPOJO> smsList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        popList();
+        PermissionController.getInstance().readSmsPermission(this);
+        SmsController.getInstance().populate(this);
         registerClickCallback();
         populateListView();
     }
@@ -53,11 +55,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-    }
-
-    private void popList() {
-        smsList.add(new SmsPOJO("Laur", "Buna, ce faci?dasdasdasd asd as dasd sad asd asd asd asd","26/08/1994"));
-        smsList.add(new SmsPOJO("Andrei", "Inchide, te sun eu","26/06/2000"));
     }
 
     private void populateListView() {
@@ -89,16 +86,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) { // TODO: Remove, just educational purpose
         switch (item.getItemId()) {
             case R.id.item1:
-                Toast.makeText(getApplicationContext(), "S-a apăsat item1", Toast.LENGTH_LONG).show();
                 DialogBox.showAlertDialogBox(DialogBox.DialogType.EXIT, this);
-                break;
-            case R.id.item2:
-                Toast.makeText(getApplicationContext(), "S-a apăsat item1", Toast.LENGTH_LONG).show();
-                SmsController.getInstance().populate(this);
-                break;
-            case R.id.item3:
-                Toast.makeText(getApplicationContext(), "S-a apăsat item1", Toast.LENGTH_LONG).show();
-                requestPermission();
                 break;
             default:
                 return super.onOptionsItemSelected(item);
@@ -108,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
     private class MyListAdapter extends ArrayAdapter<SmsPOJO>{
         public MyListAdapter(){
-            super(MainActivity.this, R.layout.sms_item, smsList);
+            super(MainActivity.this, R.layout.sms_item, SmsController.getInstance().getSmsList());
         }
 
         @Override
@@ -118,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                 itemView = getLayoutInflater().inflate(R.layout.sms_item, parent, false);
             }
             // Find the sms
-            SmsPOJO sms = smsList.get(position);
+            SmsPOJO sms = SmsController.getInstance().getSmsList().get(position);
 
             // Fill the view
             TextView sender = (TextView) itemView.findViewById(R.id.item_sender);
