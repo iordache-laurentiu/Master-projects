@@ -1,11 +1,17 @@
 package com.envision.lstoicescu.sms_reader;
 
 import android.app.AlertDialog;
+import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,6 +20,36 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        String[] test = {"Message 1", "Message 2", "Message 3"};
+        popList();
+        registerClickCallback();
+
+    }
+
+    private void popList() {
+        String[] msg = {"Message 1", "Message 2", "Message 3"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+                this,        // context
+                R.layout.sms_item,  // layout to use (create)
+                msg                 // Items to be displayed
+        );
+        ListView list = (ListView) findViewById(R.id.list);
+        list.setAdapter(adapter);
+    }
+
+
+    private void registerClickCallback() {
+        ListView list = (ListView) findViewById(R.id.list);
+//        list.setOnClickListener(); toata lista inregistreaza un click;
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
+                TextView textView = (TextView) viewClicked;
+                String msg = "You clicked position " + position + " which is string: " + textView.getText().toString();
+                Toast.makeText(MainActivity.this, msg, Toast.LENGTH_LONG).show();
+            }
+        }); // listener pentru elementele listei
     }
 
     @Override

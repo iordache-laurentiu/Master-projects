@@ -22,7 +22,7 @@ public class DialogBox {
     }
 
     public static void showAlertDialogBox(final DialogType dialogType, Context context) {
-        String dialogMessage = null; // =context.getString(R.string.DIALOG_MESSAGE);
+        String dialogMessage; // =context.getString(R.string.DIALOG_MESSAGE);
         String dialogPositiveResponse = context.getString(R.string.DIALOG_POSITIVE_RESPONSE);
         String dialogNegativeResponse = context.getString(R.string.DIALOG_NEGATIVE_RESPONSE);
 
