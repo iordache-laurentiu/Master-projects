@@ -1,8 +1,12 @@
 package com.envision.lstoicescu.sms_reader;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.DialogInterface;
+import android.content.pm.PackageManager;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,7 +19,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.envision.lstoicescu.sms_reader.controller.SmsController;
 import com.envision.lstoicescu.sms_reader.dto.SmsPOJO;
+import com.envision.lstoicescu.sms_reader.utils.DialogBox;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,11 +36,27 @@ public class MainActivity extends AppCompatActivity {
         popList();
         registerClickCallback();
         populateListView();
+    }
 
+    private void requestPermission() {
+        int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_SMS);
+        if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
+            if (ContextCompat.checkSelfPermission(this,
+                    Manifest.permission.READ_SMS)
+                    != PackageManager.PERMISSION_GRANTED) {
+                if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                        Manifest.permission.READ_SMS)) {
+                } else {
+                    ActivityCompat.requestPermissions(this,
+                            new String[]{Manifest.permission.READ_SMS},
+                            1);
+                }
+            }
+        }
     }
 
     private void popList() {
-        smsList.add(new SmsPOJO("Laur", "Buna, ce faci?","26/08/1994"));
+        smsList.add(new SmsPOJO("Laur", "Buna, ce faci?dasdasdasd asd as dasd sad asd asd asd asd","26/08/1994"));
         smsList.add(new SmsPOJO("Andrei", "Inchide, te sun eu","26/06/2000"));
     }
 
@@ -68,46 +90,20 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.item1:
                 Toast.makeText(getApplicationContext(), "S-a apăsat item1", Toast.LENGTH_LONG).show();
-                showAlertDialogBox(1);
+                DialogBox.showAlertDialogBox(DialogBox.DialogType.EXIT, this);
                 break;
             case R.id.item2:
                 Toast.makeText(getApplicationContext(), "S-a apăsat item1", Toast.LENGTH_LONG).show();
+                SmsController.getInstance().populate(this);
                 break;
             case R.id.item3:
                 Toast.makeText(getApplicationContext(), "S-a apăsat item1", Toast.LENGTH_LONG).show();
+                requestPermission();
                 break;
             default:
                 return super.onOptionsItemSelected(item);
         }
         return true;
-    }
-
-    public void showAlertDialogBox(long id) {
-        AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
-        builder1.setMessage(getString(R.string.DIALOG_POSITIVE_RESPONSE));
-        builder1.setCancelable(true);
-
-        builder1.setPositiveButton(
-                getString(R.string.DIALOG_POSITIVE_RESPONSE),
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // enter in message TODO: Can move it in caller method
-                        // read message
-                        dialog.cancel();
-                    }
-                });
-
-        builder1.setNegativeButton(
-                getString(R.string.DIALOG_NEGATIVE_RESPONSE),
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // enter in message
-                        dialog.cancel();
-                    }
-                });
-
-        AlertDialog alert11 = builder1.create();
-        alert11.show();
     }
 
     private class MyListAdapter extends ArrayAdapter<SmsPOJO>{

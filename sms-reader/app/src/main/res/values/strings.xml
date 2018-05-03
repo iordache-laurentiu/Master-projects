@@ -2,11 +2,11 @@
     <string name="app_name">sms-reader</string>
     <string name="button">Button</string>
     <string name="label1">Label</string>
-    <string name="item1">Accesaţi meniul1</string>
+    <string name="item1">Exit</string>
     <string name="item2">Accesaţi meniul2</string>
     <string name="item3">Accesaţi meniul3</string>
 
-    <string name="DIALOG_MESSAGE_SMS_CLICKED">Do you want to read the message for you?</string>
+    <string name="DIALOG_MESSAGE_SMS_CLICKED">Do you want to read this message for you?</string>
     <string name="DIALOG_MESSAGE_EXIT">Are you sure you want to close the application?</string>
     <string name="DIALOG_ERROR">Error</string>
     <string name="DIALOG_POSITIVE_RESPONSE">Yes</string>
