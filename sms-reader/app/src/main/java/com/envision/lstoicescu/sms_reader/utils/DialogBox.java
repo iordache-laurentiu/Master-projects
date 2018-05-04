@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 
 import com.envision.lstoicescu.sms_reader.R;
+import com.envision.lstoicescu.sms_reader.controller.TextToSpeechController;
+import com.envision.lstoicescu.sms_reader.dto.SmsPOJO;
 
 /**
  * Created by lstoicescu on 5/3/2018.
@@ -21,8 +23,9 @@ public class DialogBox {
     private DialogBox() {
     }
 
-    public static void showAlertDialogBox(final DialogType dialogType, Context context) {
-        String dialogMessage; // =context.getString(R.string.DIALOG_MESSAGE);
+    public static void showAlertDialogBox(final DialogType dialogType, Context context, Object niceToHave) {
+        final SmsPOJO sms = (niceToHave!=null)? (SmsPOJO)niceToHave : null;
+        String dialogMessage;
         String dialogPositiveResponse = context.getString(R.string.DIALOG_POSITIVE_RESPONSE);
         String dialogNegativeResponse = context.getString(R.string.DIALOG_NEGATIVE_RESPONSE);
 
@@ -45,12 +48,9 @@ public class DialogBox {
                 dialogPositiveResponse,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        // enter in message TODO: Can move it in caller method
-                        // read message
                         switch (dialogType) {
                             case MESSAGE_CLICKED:
-                                    // enter in message TODO: Can move it in caller method
-                                    // read message
+                                TextToSpeechController.getInstance().convertTextToSpeech(sms.getMessage());
                                 break;
                             case EXIT:
                                 System.exit(0);

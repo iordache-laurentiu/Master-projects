@@ -4,13 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.envision.lstoicescu.sms_reader.activities.MainActivity">
-
-    <ListView
-        android:id="@+id/list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </ListView>
+    tools:context="com.envision.lstoicescu.sms_reader.activities.DisplaySMS">
 
 </android.support.constraint.ConstraintLayout>

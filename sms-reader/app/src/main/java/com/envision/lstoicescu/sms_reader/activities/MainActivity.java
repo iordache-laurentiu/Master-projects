@@ -1,13 +1,7 @@
-package com.envision.lstoicescu.sms_reader;
+package com.envision.lstoicescu.sms_reader.activities;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
-import android.speech.tts.TextToSpeech;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,26 +10,34 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.envision.lstoicescu.sms_reader.R;
 import com.envision.lstoicescu.sms_reader.controller.PermissionController;
 import com.envision.lstoicescu.sms_reader.controller.SmsController;
+import com.envision.lstoicescu.sms_reader.controller.TextToSpeechController;
 import com.envision.lstoicescu.sms_reader.dto.SmsPOJO;
 import com.envision.lstoicescu.sms_reader.utils.DialogBox;
 
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Override
+
+    @Override // This will run every time when the application is started
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        PermissionController.getInstance().readSmsPermission(this);
-        SmsController.getInstance().populate(this);
-        addOnListItemClickedEvent();
-        populateListView();
-        createtts();
+        PermissionController.getInstance().readSmsPermission(this); // Ask the user's permission to read sms list
+        SmsController.getInstance().populate(this);                 // Create sms list with SmsPOJO entities
+        populateListView();                                                // Populate the main list form mainActivity
+        addOnListItemClickedEvent();                                       // Create listItem event for click
+        TextToSpeechController.getInstance().createtts(this);       // Initialize TextToSpeech entity
+    }
+
+    @Override
+    // This will run every time when the application is paused (by paused it means that the application still run in background, is not closed)
+    protected void onPause() {
+        TextToSpeechController.getInstance().pauseTTS();                   // Pause the speech process
+        super.onPause();
     }
 
     //--------------------- Menu ---------------------
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) { // TODO: Remove, just educational purpose
         switch (item.getItemId()) {
             case R.id.item1:
-                DialogBox.showAlertDialogBox(DialogBox.DialogType.EXIT, this);
+                DialogBox.showAlertDialogBox(DialogBox.DialogType.EXIT, this, null);
                 break;
             default:
                 return super.onOptionsItemSelected(item);
@@ -59,13 +61,13 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    //--------------------- List ---------------------
+
     private void populateListView() {
         ArrayAdapter<SmsPOJO> adaptor = new MyListAdapter();
         ListView list = (ListView) findViewById(R.id.list);
         list.setAdapter(adaptor);
     }
-
-    //--------------------- List ---------------------
 
     private void addOnListItemClickedEvent() {
         ListView list = (ListView) findViewById(R.id.list);
@@ -74,9 +76,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
                 SmsPOJO sms = SmsController.getInstance().getSmsList().get(position);
-                Toast.makeText(MainActivity.this, sms.getMessage(), Toast.LENGTH_LONG).show();
-                ConvertTextToSpeech(sms.getMessage());
-
+                DialogBox.showAlertDialogBox(DialogBox.DialogType.MESSAGE_CLICKED, MainActivity.this, sms);
             }
         });
     }
@@ -106,55 +106,6 @@ public class MainActivity extends AppCompatActivity {
             date.setText(sms.getDate());
 
             return itemView;
-        }
-    }
-
-    //
-
-    TextToSpeech tts;
-
-    protected void createtts() {
-
-        tts = new TextToSpeech(MainActivity.this, new TextToSpeech.OnInitListener() {
-
-            @Override
-            public void onInit(int status) {
-                // TODO Auto-generated method stub
-                if (status == TextToSpeech.SUCCESS) {
-                    int result = tts.setLanguage(Locale.US);
-                    if (result == TextToSpeech.LANG_MISSING_DATA ||
-                            result == TextToSpeech.LANG_NOT_SUPPORTED) {
-                        Log.e("error", "This Language is not supported");
-                    } else {
-                        ConvertTextToSpeech("Fuck off");
-                    }
-                } else
-                    Log.e("error", "Initilization Failed!");
-            }
-        });
-
-
-    }
-
-    @Override
-    protected void onPause() {
-        // TODO Auto-generated method stub
-        if (tts != null) {
-            tts.stop();
-            tts.shutdown();
-        }
-        super.onPause();
-    }
-
-
-    private void ConvertTextToSpeech(String text) {
-        // TODO Auto-generated method stub
-        if (text == null || "".equals(text)) {
-            text = "Content not available";
-            tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
-        } else {
-            tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
-            Log.d("PLM", "De ce nu merge>>???");
         }
     }
 }
