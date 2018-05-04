@@ -18,6 +18,8 @@ import com.envision.lstoicescu.sms_reader.controller.TextToSpeechController;
 import com.envision.lstoicescu.sms_reader.dto.SmsPOJO;
 import com.envision.lstoicescu.sms_reader.utils.DialogBox;
 
+import static com.envision.lstoicescu.sms_reader.utils.DialogBox.DialogType.*;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,23 +39,29 @@ public class MainActivity extends AppCompatActivity {
     // This will run every time when the application is paused (by paused it means that the application still run in background, is not closed)
     protected void onPause() {
         TextToSpeechController.getInstance().pauseTTS();                   // Pause the speech process
+        SmsController.getInstance().dropList();                            // Drop the list of messages from memory
         super.onPause();
+    }
+
+    @Override // This will run every time when the application is resumed
+    protected void onResume() {
+        super.onResume();
+        SmsController.getInstance().populate(this);                 // Create sms list with SmsPOJO entities
     }
 
     //--------------------- Menu ---------------------
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the main_menu;
-        // this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);                 // Sets the menu
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) { // TODO: Remove, just educational purpose
+    @Override // This will execute when an item from the menu is selected
+    public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.item1:
-                DialogBox.showAlertDialogBox(DialogBox.DialogType.EXIT, this, null);
+                // Display a dialog box that let the user decide to close de application
+                DialogBox.showAlertDialogBox(EXIT, this, null);
                 break;
             default:
                 return super.onOptionsItemSelected(item);
@@ -63,24 +71,34 @@ public class MainActivity extends AppCompatActivity {
 
     //--------------------- List ---------------------
 
+    /**
+     * This will attach the sms list to the list view
+     */
     private void populateListView() {
         ArrayAdapter<SmsPOJO> adaptor = new MyListAdapter();
         ListView list = (ListView) findViewById(R.id.list);
         list.setAdapter(adaptor);
     }
 
+    /**
+     * Will perform certain action when an item from list view is clicked
+     */
     private void addOnListItemClickedEvent() {
         ListView list = (ListView) findViewById(R.id.list);
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
-                SmsPOJO sms = SmsController.getInstance().getSmsList().get(position);
-                DialogBox.showAlertDialogBox(DialogBox.DialogType.MESSAGE_CLICKED, MainActivity.this, sms);
+                SmsPOJO sms = SmsController.getInstance().getSmsList().get(position); // get the clicked sms
+                // This will perform the dialog from which the user can select the option to read the message with TTS
+                DialogBox.showAlertDialogBox(MESSAGE_CLICKED, MainActivity.this, sms);
             }
         });
     }
 
+    /**
+     * Private inner class used to populate the list view item.
+     */
     private class MyListAdapter extends ArrayAdapter<SmsPOJO> {
         public MyListAdapter() {
             super(MainActivity.this, R.layout.sms_item, SmsController.getInstance().getSmsList());

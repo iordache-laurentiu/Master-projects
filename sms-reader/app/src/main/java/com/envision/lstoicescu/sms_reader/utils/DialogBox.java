@@ -14,10 +14,15 @@ import com.envision.lstoicescu.sms_reader.dto.SmsPOJO;
 
 public class DialogBox {
 
-    public static enum DialogType {
+    public enum DialogType {
         MESSAGE_CLICKED,
-        EXIT,
-        ETC
+        EXIT
+    }
+
+    public enum DialogResponse{
+        POSITIVE,
+        NEUTRAL,
+        NEGATIVE
     }
 
     private DialogBox() {

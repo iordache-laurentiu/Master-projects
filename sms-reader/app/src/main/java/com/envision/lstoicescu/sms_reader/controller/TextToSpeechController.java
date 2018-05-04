@@ -26,23 +26,23 @@ public class TextToSpeechController {
     }
 
     public void createtts(Context context) {
+        if (tts == null)
+            tts = new TextToSpeech(context, new TextToSpeech.OnInitListener() {
 
-        tts = new TextToSpeech(context, new TextToSpeech.OnInitListener() {
+                @Override
+                public void onInit(int status) {
+                    if (status == TextToSpeech.SUCCESS) {
+                        int result = tts.setLanguage(Locale.US);
+                        if (result == TextToSpeech.LANG_MISSING_DATA ||
+                                result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                            Log.e("ERROR", "This Language is not supported");
+                        } else {
 
-            @Override
-            public void onInit(int status) {
-                if (status == TextToSpeech.SUCCESS) {
-                    int result = tts.setLanguage(Locale.US);
-                    if (result == TextToSpeech.LANG_MISSING_DATA ||
-                            result == TextToSpeech.LANG_NOT_SUPPORTED) {
-                        Log.e("ERROR", "This Language is not supported");
-                    } else {
-
-                    }
-                } else
-                    Log.e("ERROR", "Initilization Failed!");
-            }
-        });
+                        }
+                    } else
+                        Log.e("ERROR", "Initilization Failed!");
+                }
+            });
     }
 
     public void convertTextToSpeech(String text) {
@@ -54,13 +54,13 @@ public class TextToSpeechController {
         }
     }
 
-    public void pauseTTS(){
+    public void pauseTTS() {
         if (tts != null) {
             tts.stop();
         }
     }
 
-    public void stopTTS(){
+    public void stopTTS() {
         if (tts != null) {
             tts.stop();
             tts.shutdown();
