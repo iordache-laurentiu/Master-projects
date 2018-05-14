@@ -1,4 +1,4 @@
-package com.envision.lstoicescu.sms_reader.controller;
+package com.envision.lstoicescu.sms_reader.utils;
 
 import android.content.Context;
 import android.speech.tts.TextToSpeech;
@@ -10,17 +10,17 @@ import java.util.Locale;
  * Created by lstoicescu on 5/3/2018.
  */
 
-public class TextToSpeechController {
-    private static TextToSpeechController singleton;
+public class TextToSpeechHandler {
+    private static TextToSpeechHandler singleton;
     private TextToSpeech tts;
 
-    private TextToSpeechController() {
+    private TextToSpeechHandler() {
 
     }
 
-    public static TextToSpeechController getInstance() {
+    public static TextToSpeechHandler getInstance() {
         if (singleton == null) {
-            singleton = new TextToSpeechController();
+            singleton = new TextToSpeechHandler();
         }
         return singleton;
     }

@@ -1,4 +1,4 @@
-package com.envision.lstoicescu.sms_reader.controller;
+package com.envision.lstoicescu.sms_reader.utils;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -11,16 +11,16 @@ import com.envision.lstoicescu.sms_reader.activities.MainActivity;
  * Created by lstoicescu on 5/3/2018.
  */
 
-public class PermissionController {
-    private static PermissionController singleton;
+public class PermissionHandler {
+    private static PermissionHandler singleton;
 
-    private PermissionController() {
+    private PermissionHandler() {
 
     }
 
-    public static PermissionController getInstance() {
+    public static PermissionHandler getInstance() {
         if (singleton == null) {
-            singleton = new PermissionController();
+            singleton = new PermissionHandler();
         }
         return singleton;
     }

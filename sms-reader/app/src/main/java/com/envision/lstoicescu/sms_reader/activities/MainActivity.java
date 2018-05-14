@@ -12,9 +12,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.envision.lstoicescu.sms_reader.R;
-import com.envision.lstoicescu.sms_reader.controller.PermissionController;
+import com.envision.lstoicescu.sms_reader.utils.PermissionHandler;
 import com.envision.lstoicescu.sms_reader.controller.SmsController;
-import com.envision.lstoicescu.sms_reader.controller.TextToSpeechController;
+import com.envision.lstoicescu.sms_reader.utils.TextToSpeechHandler;
 import com.envision.lstoicescu.sms_reader.dto.SmsPOJO;
 import com.envision.lstoicescu.sms_reader.utils.DialogBox;
 
@@ -28,17 +28,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        PermissionController.getInstance().readSmsPermission(this); // Ask the user's permission to read sms list
+        PermissionHandler.getInstance().readSmsPermission(this); // Ask the user's permission to read sms list
         SmsController.getInstance().populate(this);                 // Create sms list with SmsPOJO entities
         populateListView();                                                // Populate the main list form mainActivity
         addOnListItemClickedEvent();                                       // Create listItem event for click
-        TextToSpeechController.getInstance().createtts(this);       // Initialize TextToSpeech entity
+        TextToSpeechHandler.getInstance().createtts(this);       // Initialize TextToSpeech entity
     }
 
     @Override
     // This will run every time when the application is paused (by paused it means that the application still run in background, is not closed)
     protected void onPause() {
-        TextToSpeechController.getInstance().pauseTTS();                   // Pause the speech process
+        TextToSpeechHandler.getInstance().pauseTTS();                   // Pause the speech process
         SmsController.getInstance().dropList();                            // Drop the list of messages from memory
         super.onPause();
     }

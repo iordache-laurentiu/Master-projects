@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 
 import com.envision.lstoicescu.sms_reader.R;
-import com.envision.lstoicescu.sms_reader.controller.TextToSpeechController;
 import com.envision.lstoicescu.sms_reader.dto.SmsPOJO;
 
 /**
@@ -17,12 +16,6 @@ public class DialogBox {
     public enum DialogType {
         MESSAGE_CLICKED,
         EXIT
-    }
-
-    public enum DialogResponse{
-        POSITIVE,
-        NEUTRAL,
-        NEGATIVE
     }
 
     private DialogBox() {
@@ -55,7 +48,7 @@ public class DialogBox {
                     public void onClick(DialogInterface dialog, int id) {
                         switch (dialogType) {
                             case MESSAGE_CLICKED:
-                                TextToSpeechController.getInstance().convertTextToSpeech(sms.getMessage());
+                                TextToSpeechHandler.getInstance().convertTextToSpeech(sms.getMessage());
                                 break;
                             case EXIT:
                                 System.exit(0);
