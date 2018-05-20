@@ -182,7 +182,7 @@ Semnificația mesajului vorbit este un bun indicator al emoției transmise. Pent
 
 \begin{figure}[htb]
 \includegraphics[width=\columnwidth]{res/fig/arhitectura-modelL-modelA}
-\caption{Categorii de caracteristici ale semnalelor vocale}
+\caption{Arhitectura unui sistem de recunoaștere a emoțiilor ce utilizează informația acustică și lingvistică}
 \label{fig3}
 \end{figure}
 
@@ -208,7 +208,7 @@ Indicatorii de discurs reprezintă expresii lingvistice care transmit informați
 Modelele de mixturi Gaussiene oferă o bună aproximare a caracteristicilor extrase din semnalul audio prin amestecul ponderat de densități Gaussiene. Coeficienții mixturilor s-au calculat cu ajutorul unui algoritm de maximizare a așteptării. Fiecare emoție este modelata într-un GMM. În experiment s-a remarcat un rezultat bun utilizând un număr de 16 mixturi Gaussiene.
 
 \begin{figure}[htb]
-\includegraphics[width=\columnwidth]{res/fig/GMM}
+\includegraphics[width=0.9\columnwidth]{res/fig/GMM}
 \caption{Matricea de confuzie a analizei utilizând modele GMM \cite{b8}}
 \label{fig4}
 \end{figure}
@@ -221,10 +221,14 @@ Modelele de mixturi Gaussiene oferă o bună aproximare a caracteristicilor extr
 Modelul HMM reprezintă un automat cu stări finite alcătuit dintr-un set de stări conectate între care se tranziționează. Secvența de stări a modelului HMM este ascunsă, cu toate
 Matricea de confuzie a fost realizată utilizând 64 de stări și patru mixturi Gaussiene. 
 
+\begin{figure}[htb]
+\includegraphics[width=0.9\columnwidth]{res/fig/HMM}
+\caption{Matricea de confuzie a analizei utilizând modele HMM \cite{b8}}
+\label{fig5}
+\end{figure}
 
-
-
-
+\section{Concluzii}
+În acest document au fost prezentate câteva aplicații practice în care poate fi utilizat procesul de recunoaștere a emoțiilor pe baza semnalului vocal. De asemena au mai fost prezentate și principalele caracteristici pe baza cărora se face analiza semnalului și s-au prezentat rezultatele obținute în cazul utilizării a două metode distincte de recunoaștere a emoțiilor.Ambele metode prezentate s-au dovedit a fi capabile să identifice emoțiile din mesaje audio vocale. Tabelele de confuzie arată clar că unele emoții sunt confundate între ele, ceea ce indică similitudini între caracteristicile emoțiilor. De asemenea, aceste rezultate din tabelul de confuzie mai pot fi influențate și de faptul că datele utilizate la antrenare nu au avut cea mai bună calitate din punctul de vedere al calității emoțiilor. Din cele două tabele se remarcă faptul că utilizarea caracteristicilor globale oferă rezultate mai bune decât utilizarea caracteristicilor locale. 
 
 \begin{thebibliography}{00}
 

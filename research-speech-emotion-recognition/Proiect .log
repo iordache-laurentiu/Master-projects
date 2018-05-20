@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  20 MAY 2018 22:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  20 MAY 2018 23:33
 entering extended mode
 **"./Proiect .tex"
 ("Proiect .tex"
@@ -950,12 +950,12 @@ File: res/fig/pad-model-3D.png Graphic file (type png)
 <use res/fig/pad-model-3D.png>
 Package pdftex.def Info: res/fig/pad-model-3D.png  used on input line 94.
 (pdftex.def)             Requested size: 226.79846pt x 178.56691pt.
-<res/fig/clasificare-caracteristicilor.png, id=15, 462.72874pt x 382.42876pt>
+<res/fig/clasificare-caracteristicilor.png, id=15, 398.48875pt x 362.35374pt>
 File: res/fig/clasificare-caracteristicilor.png Graphic file (type png)
 <use res/fig/clasificare-caracteristicilor.png>
 Package pdftex.def Info: res/fig/clasificare-caracteristicilor.png  used on inp
 ut line 130.
-(pdftex.def)             Requested size: 226.79846pt x 187.44424pt.
+(pdftex.def)             Requested size: 214.20154pt x 194.77792pt.
 
 Overfull \vbox (2.369pt too high) has occurred while \output is active []
 
@@ -971,18 +971,27 @@ Underfull \hbox (badness 2111) in paragraph at lines 164--166
 m/n/9 Aces-tea sunt ade-sea
  []
 
-<res/fig/arhitectura-modelL-modelA.png, id=22, 719.68875pt x 590.205pt>
+<res/fig/arhitectura-modelL-modelA.png, id=22, 761.84625pt x 663.47874pt>
 File: res/fig/arhitectura-modelL-modelA.png Graphic file (type png)
 <use res/fig/arhitectura-modelL-modelA.png>
 Package pdftex.def Info: res/fig/arhitectura-modelL-modelA.png  used on input l
 ine 184.
-(pdftex.def)             Requested size: 252.0pt x 206.6649pt.
+(pdftex.def)             Requested size: 252.0pt x 219.45485pt.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 202.
 
 Overfull \vbox (2.369pt too high) has occurred while \output is active []
 
- [3 <./res/fig/arhitectura-modelL-modelA.png>]
+ [3
+
+pdfTeX warning: pdflatex: pop empty color page stack 0
+
+
+pdfTeX warning: pdflatex: pop empty color page stack 0
+
+
+pdfTeX warning: pdflatex: pop empty color page stack 0
+ <./res/fig/arhitectura-modelL-modelA.png>]
 <res/fig/GMM.png, id=31, 511.15968pt x 292.84406pt>
 File: res/fig/GMM.png Graphic file (type png)
 <use res/fig/GMM.png>
@@ -993,13 +1002,13 @@ File: res/fig/HMM.png Graphic file (type png)
 <use res/fig/HMM.png>
 Package pdftex.def Info: res/fig/HMM.png  used on input line 225.
 (pdftex.def)             Requested size: 226.79846pt x 130.68352pt.
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 241.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 243.
 
 
 ("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-Underfull \hbox (badness 3623) in paragraph at lines 247--248
+Underfull \hbox (badness 3623) in paragraph at lines 249--250
 []\T1/ptm/m/n/8 Björn Schuller, Ger-hard Rigoll, and Man-fred Lang: ``HID-DEN
  []
 
@@ -1028,7 +1037,7 @@ X 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Laur/AppData/Local/Programs
 rograms/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Laur/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/Laur/Ap
 pData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on "Proiect .pdf" (4 pages, 447169 bytes).
+Output written on "Proiect .pdf" (4 pages, 446110 bytes).
 PDF statistics:
  70 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
