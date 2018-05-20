@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  20 MAY 2018 13:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  20 MAY 2018 17:47
 entering extended mode
 **"./Proiect .tex"
 ("Proiect .tex"
@@ -727,11 +727,7 @@ LaTeX Font Info:    Try loading font information for T1+ptm on input line 105.
 ("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ))
-("Proiect .aux"
-
-LaTeX Warning: Label `fig8' multiply defined.
-
-)
+("Proiect .aux")
 \openout1 = `"Proiect .aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -748,7 +744,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 16.
- ("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+
+("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 16.
@@ -968,311 +965,42 @@ pdfTeX warning: pdflatex: pop empty color page stack 0
 
 pdfTeX warning: pdflatex: pop empty color page stack 0
  <./res/fig/clasificare_caracteristicilor.png>]
-Underfull \hbox (badness 1577) in paragraph at lines 199--201
-\T1/ptm/m/n/9 of the auto-correlation ma-trix. The pro-cess of com-put-ing the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 199--201
-
- []
-
-<res/fig/FAST.png, id=21, 578.16pt x 277.33612pt>
-File: res/fig/FAST.png Graphic file (type png)
-<use res/fig/FAST.png>
-Package pdftex.def Info: res/fig/FAST.png  used on input line 209.
-(pdftex.def)             Requested size: 252.0pt x 120.88144pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 214--216
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 242--244
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 251--253
-
- []
-
+<res/fig/arhitectura_modelL_modelA.png, id=21, 719.68875pt x 590.205pt>
+File: res/fig/arhitectura_modelL_modelA.png Graphic file (type png)
+<use res/fig/arhitectura_modelL_modelA.png>
+Package pdftex.def Info: res/fig/arhitectura_modelL_modelA.png  used on input l
+ine 157.
+(pdftex.def)             Requested size: 252.0pt x 206.6649pt.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 254.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 197.
 
 Overfull \vbox (2.369pt too high) has occurred while \output is active []
 
- [3
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
- <./res/fig/FAST.png>]
-<res/fig/SIFT.png, id=33, 1057.9525pt x 471.7625pt>
-File: res/fig/SIFT.png Graphic file (type png)
-<use res/fig/SIFT.png>
-Package pdftex.def Info: res/fig/SIFT.png  used on input line 260.
-(pdftex.def)             Requested size: 252.0pt x 112.36868pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 267--269
-
- []
-
-<res/fig/SURF.png, id=34, 315.1775pt x 212.795pt>
-File: res/fig/SURF.png Graphic file (type png)
-<use res/fig/SURF.png>
-Package pdftex.def Info: res/fig/SURF.png  used on input line 276.
-(pdftex.def)             Requested size: 252.0pt x 170.14204pt.
-<res/fig/SURFsampling.png, id=35, 319.1925pt x 215.00325pt>
-File: res/fig/SURFsampling.png Graphic file (type png)
-<use res/fig/SURFsampling.png>
-Package pdftex.def Info: res/fig/SURFsampling.png  used on input line 285.
-(pdftex.def)             Requested size: 252.0pt x 169.74243pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 301--303
-
- []
-
-
-Overfull \vbox (2.369pt too high) has occurred while \output is active []
-
- [4
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
- <./res/fig/SIFT.png> <./res/fig/SURF.png> <./res/fig/SURFsampling.png>]
-<res/fig/FREAKsampling.png, id=44, 370.986pt x 371.58826pt>
-File: res/fig/FREAKsampling.png Graphic file (type png)
-<use res/fig/FREAKsampling.png>
-Package pdftex.def Info: res/fig/FREAKsampling.png  used on input line 312.
-(pdftex.def)             Requested size: 126.0pt x 126.20226pt.
-<res/fig/FREAKsaplePairs.png, id=45, 379.4175pt x 349.90726pt>
-File: res/fig/FREAKsaplePairs.png Graphic file (type png)
-<use res/fig/FREAKsaplePairs.png>
-Package pdftex.def Info: res/fig/FREAKsaplePairs.png  used on input line 313.
-(pdftex.def)             Requested size: 126.0pt x 116.19586pt.
-
-Overfull \hbox (2.06996pt too wide) in paragraph at lines 312--314
-[][] [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 325--326
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 345--347
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 359--361
-
- []
-
-<res/fig/BRISKsampling.png, id=46, 241.65282pt x 237.13594pt>
-File: res/fig/BRISKsampling.png Graphic file (type png)
-<use res/fig/BRISKsampling.png>
-Package pdftex.def Info: res/fig/BRISKsampling.png  used on input line 366.
-(pdftex.def)             Requested size: 126.0pt x 123.64427pt.
-<res/fig/BRISKsamplePairs.jpg, id=47, 603.4545pt x 540.21825pt>
-File: res/fig/BRISKsamplePairs.jpg Graphic file (type jpg)
-<use res/fig/BRISKsamplePairs.jpg>
-Package pdftex.def Info: res/fig/BRISKsamplePairs.jpg  used on input line 367.
-(pdftex.def)             Requested size: 126.0pt x 112.78973pt.
-
-Overfull \hbox (2.06996pt too wide) in paragraph at lines 366--368
-[][] [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 372--374
-
- []
-
-
-Overfull \vbox (2.369pt too high) has occurred while \output is active []
-
- [5
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
- <./res/fig/FREAKsampling.png> <./res/fig/FREAKsaplePairs.png> <./res/fig/BRISK
-sampling.png> <./res/fig/BRISKsamplePairs.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 384--386
-
- []
-
-\width=\dimen127
-
-Underfull \hbox (badness 4328) in paragraph at lines 413--413
-[]\T1/ptm/m/n/8 Concentric cir-cles
- []
-
-
-Underfull \hbox (badness 2671) in paragraph at lines 413--413
-\T1/ptm/m/n/8 with more points
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 414--414
-[]\T1/ptm/m/n/8 Comparing gra-di-ents of
- []
-
-
-Overfull \hbox (1.02228pt too wide) in paragraph at lines 418--418
-[]\T1/ptm/m/n/8 FREAK| 
- []
-
-
-Underfull \hbox (badness 4686) in paragraph at lines 419--419
-[]\T1/ptm/m/n/8 Overlapping Con-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 420--420
-[]\T1/ptm/m/n/8 Comparing gra-di-ents of
- []
-
-
-Overfull \hbox (3.84338pt too wide) in paragraph at lines 391--426
-[][]
- []
-
-<res/fig/Matching.png, id=53, 511.9125pt x 182.93344pt>
-File: res/fig/Matching.png Graphic file (type png)
-<use res/fig/Matching.png>
-Package pdftex.def Info: res/fig/Matching.png  used on input line 434.
-(pdftex.def)             Requested size: 252.0pt x 90.05127pt.
-
-Overfull \vbox (2.369pt too high) has occurred while \output is active []
-
- [6
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
- <./res/fig/Matching.png>]
-<res/fig/ANNgeonsObjects.png, id=57, 634.37pt x 383.4325pt>
-File: res/fig/ANNgeonsObjects.png Graphic file (type png)
-<use res/fig/ANNgeonsObjects.png>
-Package pdftex.def Info: res/fig/ANNgeonsObjects.png  used on input line 485.
-(pdftex.def)             Requested size: 252.0pt x 152.31715pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 508--511
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 513--515
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 517--519
-
- []
-
-
-Overfull \vbox (2.369pt too high) has occurred while \output is active []
-
- [7
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
- <./res/fig/ANNgeonsObjects.png>]
-Overfull \vbox (2.369pt too high) has occurred while \output is active []
-
- [8]
-("Proiect .aux")
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+ [3 <./res/fig/arhitectura_modelL_modelA.png>] ("Proiect .aux") ) 
 Here is how much of TeX's memory you used:
- 4687 strings out of 493305
- 64985 string characters out of 3130237
- 134792 words of memory out of 3000000
- 8101 multiletter control sequences out of 15000+200000
- 156523 words of font info for 174 fonts, out of 3000000 for 9000
+ 4596 strings out of 493305
+ 63625 string characters out of 3130237
+ 134594 words of memory out of 3000000
+ 8031 multiletter control sequences out of 15000+200000
+ 151468 words of font info for 163 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,19n,26p,1420b,354s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}
-<C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmbx8.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cmextra/cmex9.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Laur/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Laur/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Laur/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C
-:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mr6.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmr7.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr9.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Laur/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Laur/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Laur/App
-Data/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/La
-ur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/U
-sers/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb
-><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr
-o8a.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/
-utmr8a.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/tim
-es/utmri8a.pfb>
-Output written on "Proiect .pdf" (8 pages, 1646999 bytes).
+ 41i,19n,26p,1420b,350s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Laur
+/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/Laur/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/U
+sers/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
+9.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmr9.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmsy7.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Laur/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Laur/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/Laur/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Laur/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/Laur/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
+Output written on "Proiect .pdf" (3 pages, 284848 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
+ 62 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
