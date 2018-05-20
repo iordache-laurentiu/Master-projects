@@ -18,7 +18,7 @@
 O scurtă prezentare a \\
 metodelor de detectare a emoţiilor din semnalul vocal  \\ 
 (Mai 2018)}
-\author{Iordache-Stoicescu Laurențiu-Iulian}
+\author{Iordache-Stoicescu Laurențiu}
 
 \maketitle
 
@@ -33,10 +33,8 @@ algorithms are compared in terms of accuracy and robustness.
 
 \begin{IEEEkeywords}
 HMM – Hidden Markov Model
-SVM – Support vector machine
-LPC - Linear Predictor Coefficients
-MFCC - Mel-frequency Cepstrum Coefficients
-LFPC -  Log-frequency power coefficients
+SVM – Suport vector machine
+
 \end{IEEEkeywords}
 
 
@@ -148,39 +146,6 @@ Odată extrase caracteristicile se poate să fie necesară o postprocesare înai
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-A
-\newline
-A
-\newline
-A
-\newline
-A
-\newline
 In order to find features, the eigenvalues are computed for each pixel. Constructing the response map can be done by calculating the cornernes measure $C(x, y)$ for each pixel $(x,y)$ using the
 
 \begin{equation}
