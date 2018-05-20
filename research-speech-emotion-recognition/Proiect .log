@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  20 MAY 2018 17:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  20 MAY 2018 22:32
 entering extended mode
 **"./Proiect .tex"
 ("Proiect .tex"
@@ -890,21 +890,23 @@ LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <8> not available
 (Font)              Font shape `T1/phv/b/it' tried instead on input line 26.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <8> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 26.
-Package color Info: Redefining color nblue on input line 34.
-Package color Info: Redefining color mblue on input line 34.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <5> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 27.
+Package color Info: Redefining color nblue on input line 30.
+Package color Info: Redefining color mblue on input line 30.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 34.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 30.
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <9> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 34.
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 30.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <9> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 34.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 30.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 48.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 45.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 52.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 49.
 
 
-LaTeX Warning: File `LOGO-generic-web.eps' not found on input line 84.
+LaTeX Warning: File `LOGO-generic-web.eps' not found on input line 81.
 
 Package epstopdf Info: Source file: <LOGO-generic-web.eps>
 (epstopdf)             Output file: <LOGO-generic-web-eps-converted-to.pdf>
@@ -912,13 +914,13 @@ Package epstopdf Info: Source file: <LOGO-generic-web.eps>
 (epstopdf)                    size: 97256 bytes
 (epstopdf)             Command: <epstopdf --outfile=LOGO-generic-web-eps-conver
 ted-to.pdf LOGO-generic-web.eps>
-(epstopdf)             \includegraphics on input line 84.
+(epstopdf)             \includegraphics on input line 81.
 Package epstopdf Info: Output file is already uptodate.
 <LOGO-generic-web-eps-converted-to.pdf, id=1, 212.795pt x 212.795pt>
 File: LOGO-generic-web-eps-converted-to.pdf Graphic file (type pdf)
 <use LOGO-generic-web-eps-converted-to.pdf>
 Package pdftex.def Info: LOGO-generic-web-eps-converted-to.pdf  used on input l
-ine 84.
+ine 81.
 (pdftex.def)             Requested size: 48.0pt x 48.00018pt.
 
 Overfull \hbox (259.0pt too wide) has occurred while \output is active
@@ -943,18 +945,17 @@ Overfull \vbox (41.02919pt too high) has occurred while \output is active []
 
 
  <./LOGO-generic-web-eps-converted-to.pdf>]
-<res/fig/clasificare_caracteristicilor.png, id=14, 462.72874pt x 382.42876pt>
-File: res/fig/clasificare_caracteristicilor.png Graphic file (type png)
-<use res/fig/clasificare_caracteristicilor.png>
-Package pdftex.def Info: res/fig/clasificare_caracteristicilor.png  used on inp
-ut line 104.
+<res/fig/pad-model-3D.png, id=14, 332.74312pt x 261.97874pt>
+File: res/fig/pad-model-3D.png Graphic file (type png)
+<use res/fig/pad-model-3D.png>
+Package pdftex.def Info: res/fig/pad-model-3D.png  used on input line 94.
+(pdftex.def)             Requested size: 226.79846pt x 178.56691pt.
+<res/fig/clasificare-caracteristicilor.png, id=15, 462.72874pt x 382.42876pt>
+File: res/fig/clasificare-caracteristicilor.png Graphic file (type png)
+<use res/fig/clasificare-caracteristicilor.png>
+Package pdftex.def Info: res/fig/clasificare-caracteristicilor.png  used on inp
+ut line 130.
 (pdftex.def)             Requested size: 226.79846pt x 187.44424pt.
-
-Underfull \hbox (badness 2111) in paragraph at lines 138--140
-[] \T1/phv/m/sl/9 3) Car-ac-ter-is-tici bazate pe spec-tru[]: [][][][] \T1/ptm/
-m/n/9 Aces-tea sunt ade-sea
- []
-
 
 Overfull \vbox (2.369pt too high) has occurred while \output is active []
 
@@ -964,43 +965,72 @@ pdfTeX warning: pdflatex: pop empty color page stack 0
 
 
 pdfTeX warning: pdflatex: pop empty color page stack 0
- <./res/fig/clasificare_caracteristicilor.png>]
-<res/fig/arhitectura_modelL_modelA.png, id=21, 719.68875pt x 590.205pt>
-File: res/fig/arhitectura_modelL_modelA.png Graphic file (type png)
-<use res/fig/arhitectura_modelL_modelA.png>
-Package pdftex.def Info: res/fig/arhitectura_modelL_modelA.png  used on input l
-ine 157.
+ <./res/fig/pad-model-3D.png> <./res/fig/clasificare-caracteristicilor.png>]
+Underfull \hbox (badness 2111) in paragraph at lines 164--166
+[] \T1/phv/m/sl/9 3) Car-ac-ter-is-tici bazate pe spec-tru[]: [][][][] \T1/ptm/
+m/n/9 Aces-tea sunt ade-sea
+ []
+
+<res/fig/arhitectura-modelL-modelA.png, id=22, 719.68875pt x 590.205pt>
+File: res/fig/arhitectura-modelL-modelA.png Graphic file (type png)
+<use res/fig/arhitectura-modelL-modelA.png>
+Package pdftex.def Info: res/fig/arhitectura-modelL-modelA.png  used on input l
+ine 184.
 (pdftex.def)             Requested size: 252.0pt x 206.6649pt.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 197.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 202.
 
 Overfull \vbox (2.369pt too high) has occurred while \output is active []
 
- [3 <./res/fig/arhitectura_modelL_modelA.png>] ("Proiect .aux") ) 
+ [3 <./res/fig/arhitectura-modelL-modelA.png>]
+<res/fig/GMM.png, id=31, 511.15968pt x 292.84406pt>
+File: res/fig/GMM.png Graphic file (type png)
+<use res/fig/GMM.png>
+Package pdftex.def Info: res/fig/GMM.png  used on input line 211.
+(pdftex.def)             Requested size: 226.79846pt x 129.93314pt.
+<res/fig/HMM.png, id=32, 493.845pt x 284.56313pt>
+File: res/fig/HMM.png Graphic file (type png)
+<use res/fig/HMM.png>
+Package pdftex.def Info: res/fig/HMM.png  used on input line 225.
+(pdftex.def)             Requested size: 226.79846pt x 130.68352pt.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 241.
+
+
+("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ts1ptm.fd"
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+Underfull \hbox (badness 3623) in paragraph at lines 247--248
+[]\T1/ptm/m/n/8 Björn Schuller, Ger-hard Rigoll, and Man-fred Lang: ``HID-DEN
+ []
+
+
+Overfull \vbox (2.369pt too high) has occurred while \output is active []
+
+ [4 <./res/fig/GMM.png> <./res/fig/HMM.png>] ("Proiect .aux") ) 
 Here is how much of TeX's memory you used:
- 4596 strings out of 493305
- 63625 string characters out of 3130237
- 134594 words of memory out of 3000000
- 8031 multiletter control sequences out of 15000+200000
- 151468 words of font info for 163 fonts, out of 3000000 for 9000
+ 4664 strings out of 493305
+ 64558 string characters out of 3130237
+ 137633 words of memory out of 3000000
+ 8082 multiletter control sequences out of 15000+200000
+ 159013 words of font info for 176 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,19n,26p,1420b,350s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Laur
-/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/Laur/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/U
-sers/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
-9.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmr9.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmsy7.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Laur/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Laur/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/Laur/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Laur/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/Laur/
-AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on "Proiect .pdf" (3 pages, 284848 bytes).
+ 41i,19n,26p,1420b,352s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Laur/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/Laur/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Use
+rs/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.
+pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr9.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmsy7.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Laur/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/Laur/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Laur/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/Laur/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
+Output written on "Proiect .pdf" (4 pages, 447169 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
+ 70 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

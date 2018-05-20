@@ -24,14 +24,11 @@ metodelor de detectare a emoţiilor din semnalul vocal  \\
 
 
 \begin{abstract}
-Object recognition plays a very important role in computer vision based applications. This type of application 
-are vital for autonomous systems and for industrial applications. In this paper are presented some popular approaches 
-of object recognition such as PCA, SIFT, SURF, FAST etc. Furthermore, the pros and cons of object recognition algorithms 
-are described and a classification of those algorithms by the processing based method was attempted. Finally, these 
-algorithms are compared in terms of accuracy and robustness.
+Aplicațiile de clasificare a emoțiilor sunt folosite pentru a îmbunătăți percepția mașinii asupra semanticii mesajului transmis de utilizator. În aplicațiile de clasificare a emoțiilor pe baza semnalului audio, caracteristicile utilizate cu precădere sunt cele ce țin de statistica frecvenței fundamentale, conturul energiei, durata porțiunilor de liniște și calitatea vocii. Performanța acestor sisteme scade atunci când sunt prezente mai multe emoții în semnalul audio. În acest articol s-a realizat o prezentare a caracteristicilor prezente în semnalul vocal pe baza cărora se pot determina emoțiile, a factorilor care influențează aceste caracteristici precum și o analiză a câtorva metode de deducere a unor emoții. 
 \end{abstract}
 
 \begin{IEEEkeywords}
+PAD - Pleasure-Arousal-Dominance
 HMM – Hidden Markov Model
 SVM – Support vector machine
 LPC - Linear Predictor Coefficients
@@ -66,7 +63,7 @@ Alte emoții cum ar fi tristețea induc efecte inverse față de cele anterior m
 \subsubsection{De valență} 
 De valență: Emoțiile nu pot fi caracterizate doar având în vedere nivelul de energie necesar. De exemplu, bucuria și furia sunt ambele emoții cu un nivel mare de energie dar afectează diferit. Această diferență este caracterizată de dimensiunea valenței. Din nefericire nu se știe precis cum această valență afectează caracteristicile acustice pentru alte emoții. De aceea, clasificarea între emoțiile de excitare înaltă și cele de excitare joasă se poate realiza cu precizie ridicată iar clasificarea dintre diferite alte emoții este încă greu de realizat.
 
-O altă chestiune importantă în recunoașterea emoțiilor constă în alegerea unui set definit de emoții. Lingviștii au definit un set de aproximativ 300 de emoții pe care le întâlnim pe parcursul vieții. Acest pachet de emoții este însă prea mare pentru a putea fi utilizat momentan, de aceea se recurge la utilizarea unui set restrâns de emoții de bază. O idee foarte interesantă este aceea că emoțiile pot fi descompuse în aceste emoții de bază precum culorile pot fi descompuse în culori primare. Emoțiile primare sunt definite de psihologul Paul Ekman ca fiind: tristețe, agonie, furie, surprindere, frică, dezgust și bucurie.
+O altă chestiune importantă în recunoașterea emoțiilor constă în alegerea unui set definit de emoții. Lingviștii au definit un set de aproximativ 300 de emoții pe care le întâlnim pe parcursul vieții. Acest pachet de emoții este însă prea mare pentru a putea fi utilizat momentan, de aceea se recurge la utilizarea unui set restrâns de emoții de bază. O idee foarte interesantă este aceea că emoțiile pot fi descompuse în aceste emoții de bază precum culorile pot fi descompuse în culori primare. Emoțiile primare sunt definite de psihologul Paul Ekman ca fiind: tristețe, agonie, furie, surprindere, frică, dezgust și bucurie \cite{b6}.
 
 
 \subsection{Baza de Date}
@@ -77,6 +74,35 @@ Din păcate, majoritatea bazelor de date cu date audio ce conțin înregistrări
 
 \subsection{Fapt}
 În carlinga avioanelor s-a descoperit  că sistemele de recunoaștere a vorbirii antrenate cu mesaje de la un subiect aflat sub stres au performanțe mult mai bune decât sistemele antrenate cu mesaje de la subiecți aflați în stare normală.
+
+
+\section{Emoțiile}
+Cuvântul emoție este adese considerat ca fiind o stare afectivă a minții. În conversațiile umane normale, oamenii sunt capabili să identifice emoțiile altora pe baza vocii, a posturii, a gesturilor și a expresiei faciale. Emoțiile sunt adesea neglijate în interacțiunea dintre om și mașină. Pentru a putea detecția emoțiilor trebuie determinate trei aspecte:
+
+\begin{itemize}
+\item Ce reprezintă o stare afectivă?
+
+\item Ce semnale din comunicația verbală exprimă informația despre starea afectiva?
+
+\item Cum ar trebui combinate diversele caracteristici pentru a optimiza percepția emoțiile de către mașină?
+\end{itemize}
+
+
+În literatură, emoțiile enumerate de Ekman (furie, dezgust, frică, fericire, tristețe și surprindere) sunt folosite cu precădere. Au fost propuse mai multe modele de ilustrare a relațiilor dintre valențe, excitare și emoții. Figura 1 prezintă modelul PAD al stărilor emoționale o analiză a emoțiilor propuse de alt psiholog, Russell \cite{b5}.
+
+\begin{figure}[htb]
+\includegraphics[width=0.9\columnwidth]{res/fig/pad-model-3D}
+\caption{Modelul PAD 3D de clasificare a emoțiilor \cite{b7}}
+\label{fig1}
+\end{figure}
+
+Din acest model se disting următoarele:
+
+\begin{itemize}
+\item Excitarea(Arousal) - emoțiile sunt caracterizate pe baza nivelului lor de excitare. 
+
+\item Valență - emoțiile sunt caracterizate în funcție de cât sunt de pozitive sau de negative. Emoțiile pozitive sporesc atenția și alte funcții cognitive ale unei persoane
+\end{itemize}
 
 
 \section{Caracteristici utilizate pentru recunoașterea emoțiilor}
@@ -101,9 +127,9 @@ Un aspect important în recunoașterea emoțiilor îl reprezintă extragerea car
 Caracteristicile vorbirii pot fi grupate în următoarele categorii: Caracteristici continue, caracteristici calitative, caracteristici spectrale și caracteristici bazate pe operatorul TEO. În figura 1 se pot observa exemple de caracteristici aparținând fiecărei categorii.
 
 \begin{figure}[htb]
-\includegraphics[width=0.9\columnwidth]{res/fig/clasificare_caracteristicilor}
+\includegraphics[width=0.9\columnwidth]{res/fig/clasificare-caracteristicilor}
 \caption{Categorii de caracteristici ale semnalelor vocale}
-\label{fig1}
+\label{fig2}
 \end{figure}
 
 \subsubsection{Caracteristici de vorbire continue}
@@ -146,6 +172,7 @@ Deoarece intervalele de liniște pot oferi informații importante asupra stării
 
 Odată extrase caracteristicile se poate să fie necesară o postprocesare înainte de a antrena clasificatorul. De exemplu, este posibil ca vectorii extrași să aibă unități diferite și prin urmare, valorile lor numerice pot avea ordine de mărime diferite sau pot lipsi cu desăvârșire.
 
+
 \subsection{Combinarea caracteristicilor acustice cu alte surse de informații}
 În multe situații, nu este suficientă doar informația provenită din semnalul vocal. Se pot utiliza informațiile referitoare de expresiile faciale sau informația mesajului pentru a putea îmbunătăți performanțele de recunoaștere
 
@@ -154,9 +181,9 @@ Odată extrase caracteristicile se poate să fie necesară o postprocesare înai
 Semnificația mesajului vorbit este un bun indicator al emoției transmise. Pentru a putea utiliza informațiile lingvistice este necesară recunoașterea secvenței de cuvinte din propoziție. Pentru aceasta este necesar un model de limbă. Acesta descrie constrângerile posibilelor secvențe de cuvinte ale unei limbi. Un astfel de model de limbă este modelul N-gram, acesta atribuie probabilități secvențelor de cuvinte ce pot avea loc. În figura 2 este prezentată arhitectura de bază a unui sistem de recunoaștere a vorbirii ce combină rolurile modelului acustic cu cel al modelului lingvistic pentru identificarea celei mai bune secvențe în care am putea detecta o anumită emoție.
 
 \begin{figure}[htb]
-\includegraphics[width=\columnwidth]{res/fig/arhitectura_modelL_modelA}
+\includegraphics[width=\columnwidth]{res/fig/arhitectura-modelL-modelA}
 \caption{Categorii de caracteristici ale semnalelor vocale}
-\label{fig2}
+\label{fig3}
 \end{figure}
 
 Modelul de limbă este realizat pe baza transcrierii cuvintelor, în paralel are loc extragerea de vectori de caracteristici din semnalul vocal. Vectorul rezultat împreună cu dicționarul de limbă sunt utilizate pentru a antrena modelele acustice de foneme. La recunoaștere sunt utilizate atât modelul acustic cât și cel de limbă pentru a putea recunoaște secvența după următoarea regulă:
@@ -174,15 +201,31 @@ Formula utilizează funcția argmax, care selectează argumentul ce maximizează
 Indicatorii de discurs reprezintă expresii lingvistice care transmit informații explicite despre structura discursului sau au o contribuție semantică la aceasta. În contextul de recunoaștere a emoțiilor, informațiile legate de discurs mai prezintă și modul în care utilizatorul interacționează cu sistemul. Se întâmplă adesea ca utilizatorul să manifeste emoții in timpul interacțiunii cu sistemul, emoții cum ar fi frustrarea. Informațiile de discurs sunt combinate cu informațiile acustice pentru a îmbunătăți performanțele de recunoaștere.
 
 
+\section{Metode de recunoaștere a emoțiilor}
+În continuare se a prezenta o comparație între rezultatele obținute de două metode de recunoaștere a emoțiilor. Prima metodă se bazează pe utilizarea modele de mixturi Gaussiene antrenate pe baza caracteristicilor globale cum ar fi frecvența fundamentală și conturul energiei semnalului audio. A doua metodă utilizează modele Markov ascunse antrenate pe baza caracteristicilor locale ale semnalului audio. 
+
+\subsection{Modele de mixturi Gaussiene}
+Modelele de mixturi Gaussiene oferă o bună aproximare a caracteristicilor extrase din semnalul audio prin amestecul ponderat de densități Gaussiene. Coeficienții mixturilor s-au calculat cu ajutorul unui algoritm de maximizare a așteptării. Fiecare emoție este modelata într-un GMM. În experiment s-a remarcat un rezultat bun utilizând un număr de 16 mixturi Gaussiene.
+
+\begin{figure}[htb]
+\includegraphics[width=0.9\columnwidth]{res/fig/GMM}
+\caption{Matricea de confuzie a analizei utilizând modele GMM \cite{b8}}
+\label{fig4}
+\end{figure}
+
+ În tabel sunt următoarele abrevieri: sur - surprise, joy - joy, ang - anger, fea - fear, dis - disgust, sad - sadness și ntl - neutral \cite{b8}.
 
 
 
+\subsection{Modele Markov ascunse}
+Modelul HMM reprezintă un automat cu stări finite alcătuit dintr-un set de stări conectate între care se tranziționează. Secvența de stări a modelului HMM este ascunsă, cu toate
+Matricea de confuzie a fost realizată utilizând 64 de stări și patru mixturi Gaussiene. 
 
-
-
-
-
-
+\begin{figure}[htb]
+\includegraphics[width=0.9\columnwidth]{res/fig/HMM}
+\caption{Matricea de confuzie a analizei utilizând modele HMM \cite{b8}}
+\label{fig5}
+\end{figure}
 
 
 \begin{thebibliography}{00}
@@ -191,7 +234,17 @@ Indicatorii de discurs reprezintă expresii lingvistice care transmit informați
 
 \bibitem{b2} validare în vruce: https://www.openml.org/a/estimation-procedures/1
 
-\bibitem{b3} Dr. Ing. Horia Cucu ``Proiect de cercetare-dezvoltare în Tehnologia Vorbirii''
+\bibitem{b3} Horia Cucu: ``Proiect de cercetare-dezvoltare în Tehnologia Vorbirii''
+
+\bibitem{b4} Senaka Amarakeerthi, Rasika Ranaweera, and Michael Cohen: Speech-based Emotion Characterization using Postures and Gestures in CVEs
+
+\bibitem{b5} Vicki R. LeBlanc • Meghan M. McConnell • Sandra D. Monteiro: ``Predictable chaos: a review of the effects of emotions on attention, memory and decision making''
+
+\bibitem{b6} Paul Ekman: ``Emotions Revealed''
+
+\bibitem{b7} Jonghwa Kim, Elisabeth Andre: ``Emotion Recognition Based on Physiological Changes in Music Listening''
+
+\bibitem{b8} Björn Schuller, Gerhard Rigoll, and Manfred Lang: ``HIDDEN MARKOV MODEL-BASED SPEECH EMOTION RECOGNITION''
 
 \end{thebibliography}
 \end{document}
