@@ -127,7 +127,7 @@ Un aspect important în recunoașterea emoțiilor îl reprezintă extragerea car
 Caracteristicile vorbirii pot fi grupate în următoarele categorii: Caracteristici continue, caracteristici calitative, caracteristici spectrale și caracteristici bazate pe operatorul TEO. În figura 1 se pot observa exemple de caracteristici aparținând fiecărei categorii.
 
 \begin{figure}[htb]
-\includegraphics[width=0.9\columnwidth]{res/fig/clasificare-caracteristicilor}
+\includegraphics[width=0.85\columnwidth]{res/fig/clasificare-caracteristicilor}
 \caption{Categorii de caracteristici ale semnalelor vocale}
 \label{fig2}
 \end{figure}
@@ -202,13 +202,13 @@ Indicatorii de discurs reprezintă expresii lingvistice care transmit informați
 
 
 \section{Metode de recunoaștere a emoțiilor}
-În continuare se a prezenta o comparație între rezultatele obținute de două metode de recunoaștere a emoțiilor. Prima metodă se bazează pe utilizarea modele de mixturi Gaussiene antrenate pe baza caracteristicilor globale cum ar fi frecvența fundamentală și conturul energiei semnalului audio. A doua metodă utilizează modele Markov ascunse antrenate pe baza caracteristicilor locale ale semnalului audio. 
-
+În continuare se va prezenta o comparație între rezultatele obținute de două metode de recunoaștere a emoțiilor. Prima metodă se bazează pe utilizarea modele de mixturi Gaussiene antrenate pe baza caracteristicilor globale cum ar fi frecvența fundamentală și conturul energiei semnalului audio. A doua metodă utilizează modele Markov ascunse antrenate pe baza caracteristicilor locale ale semnalului audio. 
+De asemenea, vor mai fi prezentați și alți algoritmi utilizați în detecția emoțiilo împreună cu rezultatele obținute.
 \subsection{Modele de mixturi Gaussiene}
 Modelele de mixturi Gaussiene oferă o bună aproximare a caracteristicilor extrase din semnalul audio prin amestecul ponderat de densități Gaussiene. Coeficienții mixturilor s-au calculat cu ajutorul unui algoritm de maximizare a așteptării. Fiecare emoție este modelata într-un GMM. În experiment s-a remarcat un rezultat bun utilizând un număr de 16 mixturi Gaussiene.
 
 \begin{figure}[htb]
-\includegraphics[width=0.9\columnwidth]{res/fig/GMM}
+\includegraphics[width=0.8\columnwidth]{res/fig/GMM}
 \caption{Matricea de confuzie a analizei utilizând modele GMM \cite{b8}}
 \label{fig4}
 \end{figure}
@@ -222,10 +222,87 @@ Modelul HMM reprezintă un automat cu stări finite alcătuit dintr-un set de st
 Matricea de confuzie a fost realizată utilizând 64 de stări și patru mixturi Gaussiene. 
 
 \begin{figure}[htb]
-\includegraphics[width=0.9\columnwidth]{res/fig/HMM}
+\includegraphics[width=0.8\columnwidth]{res/fig/HMM}
 \caption{Matricea de confuzie a analizei utilizând modele HMM \cite{b8}}
 \label{fig5}
 \end{figure}
+
+În cazul utilizării de modele Markov ascunse s-a obținut o acuratețe medie de $77.8\%$.
+
+În figura 6 este prezentată evoluția ratei de recunoaștere în funcție de numărul de stări folosite. S-a remarcat că cele mai bune rezultate se obțin pentru utilizarea a 64 de stări. 
+
+\begin{figure}[htb]
+\includegraphics[width=\columnwidth]{res/fig/rata-de-recunoastere-in-functie-de-numarul-de-stari}
+\caption{Rata de recunoaștere în funcție de numărul de stări utilizate \cite{b8}}
+\label{fig6}
+\end{figure}
+
+După cum se poate observa, o creștere generală a performanțelor poate fi obținută crescând numărul de stări. Creșterea performaței vine însă cu un cost și anume creșterea timpului de procesare.
+
+
+\subsection{K-nearest neighbors}
+În procesul de recunoaștere de tipare, k-nearest neighbors reprezintă un algoritm non-parametric folosit pentru clasificare și regresie. Acesta primește ca intrare un număr K de caracteristici de antrenare pe baza cărora poate determina o separare între emoții.
+În acest caz s-au utilizat 70\% din setul de date s70 pentru antrenare și 30\% dintre ele ca set de test. Pentur K varian între 1 și 15 s-au obținut următoarele rezultate de precizie: Pentru utilizarea a 8 caracteristici s-a obținut o acuratețe medie aproximativ egală cu 55\%, în cazul utilizării a 10 și 14 caracteristici se obține un rezultat mult mai mare al detecției de furie și anume 65\%. Se obțin rezultate slabe în cazul recunoașterii fricii (13\%, 7\% și 1\% pentru un număr de 8, 10 respectiv 14 caracteristici).
+
+\begin{figure}[htb]
+\includegraphics[width=\columnwidth]{res/fig/data-set}
+\caption{Distribuția emoțiilor pentur setul de date \cite{b9}}
+\label{fig7}
+\end{figure}
+
+
+\subsection{Rețele neuronale}
+S-a utilizat o reșea cu două niveluri cu un vector de intrare de 8, 10 respectiv 14 elemente, 10 sau 20 de noduri în nivelul ascuns și 5 noduri ăn nivelul liniar de ieșire. Numărul de intrari corespunde numărului de caracteristici iar numărul de ieșiri corespunde numărului de emoții. Pentur antrenarea acestei rețele s-au utilizat seturile de date s70, s80 și s90 care au fost împărțite în 70\% date de antrenare și 30\% date de testare. Au fost create mai multe clasificatoare ce au fost antrenate cu matrici de ponderare diferite. Această abordare a fost aplicată pe setul de date s70 pentru 8 caracteristici. S-au obșinut următoarele rezultate: 
+
+\begin{table}[htb]
+\centering
+\caption{Rezultate obținute în cazul recunoașterii de emoții cu ajutorul rețelelor neuronale}
+\label{table1}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{|p{0.25\columnwidth}|p{0.25\columnwidth}|}
+\hline
+
+
+Acuratețe&
+Emoție\\
+\hline
+
+Stare normală&
+55-65\%\\
+\hline
+
+Fericire&
+60-70\%\\
+\hline
+
+Furie&
+60-80\%\\
+\hline
+
+Frică&
+25-50\%\\
+\hline
+
+Acuratețe medie&
+65\%\\
+\hline
+
+\end{tabular}
+\label{tab1}
+\end{table}
+
+
+\subsection{Ansamblu de rețele neuronale}
+Un ansamblu de rețele neuronale este compus dintr-un număr impar de clasificatoare ce au fost antrenate pe diferite subseturi de date folosind agregare bootstrap dar și tehnici de validare în cruce. Deciziile se iau pe baza principiului de vot majoritar. Numărul de rețele reuronale din ansamblu a fost variat într 7 și 15. În figura 8 este prezentată acuratețea de recunoaștere medie a ansamblului format din 15 rețele neuronale. S-a utulizat setul de date s70, numărul de caracteristici utilizate este de 8, 10 respectiv 14 și s-a ținut cont și de cele două arhitecturi cu 10 respectiv 20 de neuroni în nivelul ascuns.
+
+\begin{figure}[htb]
+\includegraphics[width=\columnwidth]{res/fig/precizia-medie-a-recunoasterii-emotiilor}
+\caption{Acuratețea recunoașterii emoțiilor pentru setul de date s70 \cite{b9}}
+\label{fig8}
+\end{figure}
+
+Se poate observa din grafic că acuratețea cu care se efectuează detecția fericirii își păstrează valoarea pe la aproximativ 65\% pentru toate cazurile de variere a caracteristicilor de intrare sau a arhitecturilor. Acuratețea pentru detecția fricii este relativ scăzută, aceasta este identificată cu o precizie de 35-53\%. Precizia detecției furiei pornește de la 73\% pentru un vector de 8 caracteristici și crește până la 81\% pentur un set de 14 caracteristici. Cel mai bun rezultat din punct de vedere al acurateții îl reprezintă detecția tristeții, aceasta având o precizie de 73\% to 83\%. Acuratețea medie este situată la 70\%. 
+
 
 \section{Concluzii}
 În acest document au fost prezentate câteva aplicații practice în care poate fi utilizat procesul de recunoaștere a emoțiilor pe baza semnalului vocal. De asemena au mai fost prezentate și principalele caracteristici pe baza cărora se face analiza semnalului și s-au prezentat rezultatele obținute în cazul utilizării a două metode distincte de recunoaștere a emoțiilor.Ambele metode prezentate s-au dovedit a fi capabile să identifice emoțiile din mesaje audio vocale. Tabelele de confuzie arată clar că unele emoții sunt confundate între ele, ceea ce indică similitudini între caracteristicile emoțiilor. De asemenea, aceste rezultate din tabelul de confuzie mai pot fi influențate și de faptul că datele utilizate la antrenare nu au avut cea mai bună calitate din punctul de vedere al calității emoțiilor. Din cele două tabele se remarcă faptul că utilizarea caracteristicilor globale oferă rezultate mai bune decât utilizarea caracteristicilor locale. 
@@ -247,6 +324,9 @@ Matricea de confuzie a fost realizată utilizând 64 de stări și patru mixturi
 \bibitem{b7} Jonghwa Kim, Elisabeth Andre: ``Emotion Recognition Based on Physiological Changes in Music Listening''
 
 \bibitem{b8} Björn Schuller, Gerhard Rigoll, and Manfred Lang: ``HIDDEN MARKOV MODEL-BASED SPEECH EMOTION RECOGNITION''
+
+\bibitem{b9} Valery A. Petrushin: ``EMOTION RECOGNITION IN SPEECH SIGNAL:
+EXPERIMENTAL STUDY, DEVELOPMENT, AND APPLICATION'', International Conference on Spoken Language Processing (ICSLP 2000)
 
 \end{thebibliography}
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.6)  14 MAY 2018 15:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.6)  22 MAY 2018 09:26
 entering extended mode
 **"./Proiect .tex"
 ("Proiect .tex"
@@ -722,13 +722,7 @@ LaTeX Font Info:    Try loading font information for T1+ptm on input line 105.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-))
-("C:\dev\workspace\Master-projects\research-emotion-detection-in-voice\build\Pr
-oiect .aux"
-
-LaTeX Warning: Label `fig8' multiply defined.
-
-)
+)) ("Proiect .aux")
 \openout1 = `"Proiect .aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -745,7 +739,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 16.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 16.
@@ -870,40 +865,38 @@ LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <8> not available
 (Font)              Font shape `T1/phv/b/it' tried instead on input line 26.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <8> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 26.
-Package color Info: Redefining color nblue on input line 34.
-Package color Info: Redefining color mblue on input line 34.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <5> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 27.
+Package color Info: Redefining color nblue on input line 30.
+Package color Info: Redefining color mblue on input line 30.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 34.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 30.
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <9> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 34.
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 30.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <9> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 34.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 30.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 61.
-
-<res/fig/ann.jpg, id=1, 793.96625pt x 389.455pt>
-File: res/fig/ann.jpg Graphic file (type jpg)
- <use res/fig/ann.jpg>
-Package pdftex.def Info: res/fig/ann.jpg used on input line 94.
-(pdftex.def)             Requested size: 252.0pt x 123.61195pt.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 45.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 49.
 
 
-LaTeX Warning: File `LOGO-generic-web.eps' not found on input line 101.
+LaTeX Warning: File `LOGO-generic-web.eps' not found on input line 81.
 
 Package epstopdf Info: Source file: <LOGO-generic-web.eps>
 (epstopdf)             Output file: <LOGO-generic-web-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-02 10:09:32
+(epstopdf)                    date: 2018-05-21 09:56:39
 (epstopdf)                    size: 97256 bytes
 (epstopdf)             Command: <epstopdf --outfile=LOGO-generic-web-eps-conver
 ted-to.pdf LOGO-generic-web.eps>
-(epstopdf)             \includegraphics on input line 101.
+(epstopdf)             \includegraphics on input line 81.
 Package epstopdf Info: Output file is already uptodate.
-<LOGO-generic-web-eps-converted-to.pdf, id=2, 212.795pt x 212.795pt>
+<LOGO-generic-web-eps-converted-to.pdf, id=1, 212.795pt x 212.795pt>
 File: LOGO-generic-web-eps-converted-to.pdf Graphic file (type pdf)
 
 <use LOGO-generic-web-eps-converted-to.pdf>
 Package pdftex.def Info: LOGO-generic-web-eps-converted-to.pdf used on input li
-ne 101.
+ne 81.
 (pdftex.def)             Requested size: 48.0pt x 48.00018pt.
 
 Overfull \hbox (259.0pt too wide) has occurred while \output is active
@@ -928,15 +921,20 @@ Overfull \vbox (41.02919pt too high) has occurred while \output is active []
 
 
  <./LOGO-generic-web-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 129--131
+<res/fig/pad-model-3D.png, id=14, 332.74312pt x 261.97874pt>
+File: res/fig/pad-model-3D.png Graphic file (type png)
 
- []
+<use res/fig/pad-model-3D.png>
+Package pdftex.def Info: res/fig/pad-model-3D.png used on input line 94.
+(pdftex.def)             Requested size: 226.79846pt x 178.56691pt.
 
-<res/fig/Harris.png, id=21, 258.36525pt x 278.2395pt>
-File: res/fig/Harris.png Graphic file (type png)
- <use res/fig/Harris.png>
-Package pdftex.def Info: res/fig/Harris.png used on input line 149.
-(pdftex.def)             Requested size: 226.79846pt x 244.24864pt.
+<res/fig/clasificare-caracteristicilor.png, id=15, 398.48875pt x 362.35374pt>
+File: res/fig/clasificare-caracteristicilor.png Graphic file (type png)
+
+<use res/fig/clasificare-caracteristicilor.png>
+Package pdftex.def Info: res/fig/clasificare-caracteristicilor.png used on inpu
+t line 130.
+(pdftex.def)             Requested size: 214.20154pt x 194.77792pt.
 
 Overfull \vbox (2.369pt too high) has occurred while \output is active []
 
@@ -946,61 +944,21 @@ pdfTeX warning: pdflatex: pop empty color page stack 0
 
 
 pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
- <./res/fig/ann.jpg> <./res/fig/Harris.png>]
-Underfull \hbox (badness 1577) in paragraph at lines 169--171
-\T1/ptm/m/n/9 of the auto-correlation ma-trix. The pro-cess of com-put-ing the
+ <./res/fig/pad-model-3D.png> <./res/fig/clasificare-caracteristicilor.png>]
+Underfull \hbox (badness 2111) in paragraph at lines 164--166
+[] \T1/phv/m/sl/9 3) Car-ac-ter-is-tici bazate pe spec-tru[]: [][][][] \T1/ptm/
+m/n/9 Aces-tea sunt ade-sea
  []
 
+<res/fig/arhitectura-modelL-modelA.png, id=22, 761.84625pt x 663.47874pt>
+File: res/fig/arhitectura-modelL-modelA.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--171
-
- []
-
-<res/fig/FAST.png, id=29, 578.16pt x 277.33612pt>
-File: res/fig/FAST.png Graphic file (type png)
- <use res/fig/FAST.png>
-Package pdftex.def Info: res/fig/FAST.png used on input line 179.
-(pdftex.def)             Requested size: 252.0pt x 120.88144pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 184--186
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 212--214
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 221--223
-
- []
-
-<res/fig/SIFT.png, id=30, 1057.9525pt x 471.7625pt>
-File: res/fig/SIFT.png Graphic file (type png)
- <use res/fig/SIFT.png>
-Package pdftex.def Info: res/fig/SIFT.png used on input line 230.
-(pdftex.def)             Requested size: 252.0pt x 112.36868pt.
+<use res/fig/arhitectura-modelL-modelA.png>
+Package pdftex.def Info: res/fig/arhitectura-modelL-modelA.png used on input li
+ne 184.
+(pdftex.def)             Requested size: 252.0pt x 219.45485pt.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 236.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 202.
 
 Overfull \vbox (2.369pt too high) has occurred while \output is active []
 
@@ -1013,277 +971,93 @@ pdfTeX warning: pdflatex: pop empty color page stack 0
 
 
 pdfTeX warning: pdflatex: pop empty color page stack 0
- <./res/fig/FAST.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 237--239
+ <./res/fig/arhitectura-modelL-modelA.png>]
+<res/fig/GMM.png, id=31, 511.15968pt x 292.84406pt>
+File: res/fig/GMM.png Graphic file (type png)
+ <use res/fig/GMM.png>
+Package pdftex.def Info: res/fig/GMM.png used on input line 211.
+(pdftex.def)             Requested size: 201.60077pt x 115.49562pt.
 
- []
+<res/fig/HMM.png, id=32, 493.845pt x 284.56313pt>
+File: res/fig/HMM.png Graphic file (type png)
+ <use res/fig/HMM.png>
+Package pdftex.def Info: res/fig/HMM.png used on input line 225.
+(pdftex.def)             Requested size: 201.60077pt x 116.1636pt.
 
-<res/fig/SURF.png, id=38, 315.1775pt x 212.795pt>
-File: res/fig/SURF.png Graphic file (type png)
- <use res/fig/SURF.png>
-Package pdftex.def Info: res/fig/SURF.png used on input line 246.
-(pdftex.def)             Requested size: 252.0pt x 170.14204pt.
+<res/fig/rata-de-recunoastere-in-functie-de-numarul-de-stari.png, id=33, 334.24
+875pt x 177.66376pt>
+File: res/fig/rata-de-recunoastere-in-functie-de-numarul-de-stari.png Graphic f
+ile (type png)
 
-<res/fig/SURFsampling.png, id=39, 319.1925pt x 215.00325pt>
-File: res/fig/SURFsampling.png Graphic file (type png)
+<use res/fig/rata-de-recunoastere-in-functie-de-numarul-de-stari.png>
+Package pdftex.def Info: res/fig/rata-de-recunoastere-in-functie-de-numarul-de-
+stari.png used on input line 235.
+(pdftex.def)             Requested size: 252.0pt x 133.94962pt.
 
-<use res/fig/SURFsampling.png>
-Package pdftex.def Info: res/fig/SURFsampling.png used on input line 255.
-(pdftex.def)             Requested size: 252.0pt x 169.74243pt.
+<res/fig/data-set.png, id=34, 456.5055pt x 243.309pt>
+File: res/fig/data-set.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--273
+<use res/fig/data-set.png>
+Package pdftex.def Info: res/fig/data-set.png used on input line 248.
+(pdftex.def)             Requested size: 252.0pt x 134.31042pt.
 
- []
 
-<res/fig/FREAKsampling.png, id=40, 370.986pt x 371.58826pt>
-File: res/fig/FREAKsampling.png Graphic file (type png)
-
-<use res/fig/FREAKsampling.png>
-Package pdftex.def Info: res/fig/FREAKsampling.png used on input line 282.
-(pdftex.def)             Requested size: 126.0pt x 126.20226pt.
-
-<res/fig/FREAKsaplePairs.png, id=41, 379.4175pt x 349.90726pt>
-File: res/fig/FREAKsaplePairs.png Graphic file (type png)
-
-<use res/fig/FREAKsaplePairs.png>
-Package pdftex.def Info: res/fig/FREAKsaplePairs.png used on input line 283.
-(pdftex.def)             Requested size: 126.0pt x 116.19586pt.
-
-Overfull \hbox (2.06996pt too wide) in paragraph at lines 282--284
-[][] [] 
- []
+LaTeX Warning: Citation `b9' on page 4 undefined on input line 249.
 
 
 Overfull \vbox (2.369pt too high) has occurred while \output is active []
 
- [4
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
- <./res/fig/SIFT.png> <./res/fig/SURF.png> <./res/fig/SURFsampling.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 295--296
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 315--317
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 329--331
-
- []
-
-<res/fig/BRISKsampling.png, id=47, 241.65282pt x 237.13594pt>
-File: res/fig/BRISKsampling.png Graphic file (type png)
-
-<use res/fig/BRISKsampling.png>
-Package pdftex.def Info: res/fig/BRISKsampling.png used on input line 336.
-(pdftex.def)             Requested size: 126.0pt x 123.64427pt.
-
-<res/fig/BRISKsamplePairs.jpg, id=48, 603.4545pt x 540.21825pt>
-File: res/fig/BRISKsamplePairs.jpg Graphic file (type jpg)
-
-<use res/fig/BRISKsamplePairs.jpg>
-Package pdftex.def Info: res/fig/BRISKsamplePairs.jpg used on input line 337.
-(pdftex.def)             Requested size: 126.0pt x 112.78973pt.
-
-Overfull \hbox (2.06996pt too wide) in paragraph at lines 336--338
-[][] [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 342--344
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 354--356
-
- []
-
+ [4 <./res/fig/GMM.png> <./res/fig/HMM.png> <./res/fig/rata-de-recunoastere-in-
+functie-de-numarul-de-stari.png> <./res/fig/data-set.png>]
 \width=\dimen127
 
-Underfull \hbox (badness 4328) in paragraph at lines 383--383
-[]\T1/ptm/m/n/8 Concentric cir-cles
- []
+<res/fig/precizia-medie-a-recunoasterii-emotiilor.png, id=42, 496.254pt x 257.1
+6075pt>
+File: res/fig/precizia-medie-a-recunoasterii-emotiilor.png Graphic file (type p
+ng)
+ <use res/fig/precizia-medie-a-recunoasterii-emotiilor.png>
+Package pdftex.def Info: res/fig/precizia-medie-a-recunoasterii-emotiilor.png u
+sed on input line 299.
+(pdftex.def)             Requested size: 252.0pt x 130.58519pt.
 
 
-Underfull \hbox (badness 2671) in paragraph at lines 383--383
-\T1/ptm/m/n/8 with more points
- []
+LaTeX Warning: Citation `b9' on page 5 undefined on input line 300.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 384--384
-[]\T1/ptm/m/n/8 Comparing gra-di-ents of
- []
-
-
-Overfull \hbox (1.02228pt too wide) in paragraph at lines 388--388
-[]\T1/ptm/m/n/8 FREAK| 
- []
-
-
-Underfull \hbox (badness 4686) in paragraph at lines 389--389
-[]\T1/ptm/m/n/8 Overlapping Con-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 390--390
-[]\T1/ptm/m/n/8 Comparing gra-di-ents of
- []
-
-
-Overfull \hbox (3.84338pt too wide) in paragraph at lines 361--396
-[][]
+Underfull \hbox (badness 3623) in paragraph at lines 326--327
+[]\T1/ptm/m/n/8 Björn Schuller, Ger-hard Rigoll, and Man-fred Lang: ``HID-DEN
  []
 
 
 Overfull \vbox (2.369pt too high) has occurred while \output is active []
 
- [5
+ [5 <./res/fig/precizia-medie-a-recunoasterii-emotiilor.png>] ("Proiect .aux")
 
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
- <./res/fig/FREAKsampling.png> <./res/fig/FREAKsaplePairs.png> <./res/fig/BRISK
-sampling.png> <./res/fig/BRISKsamplePairs.jpg>]
-<res/fig/Matching.png, id=54, 511.9125pt x 182.93344pt>
-File: res/fig/Matching.png Graphic file (type png)
-
-<use res/fig/Matching.png>
-Package pdftex.def Info: res/fig/Matching.png used on input line 404.
-(pdftex.def)             Requested size: 252.0pt x 90.05127pt.
-
-<res/fig/ANNgeonsObjects.png, id=55, 634.37pt x 383.4325pt>
-File: res/fig/ANNgeonsObjects.png Graphic file (type png)
-
-<use res/fig/ANNgeonsObjects.png>
-Package pdftex.def Info: res/fig/ANNgeonsObjects.png used on input line 455.
-(pdftex.def)             Requested size: 252.0pt x 152.31715pt.
-
-Overfull \vbox (2.369pt too high) has occurred while \output is active []
-
- [6
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
- <./res/fig/Matching.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 478--481
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 483--485
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 487--489
-
- []
-
-
-Overfull \vbox (2.369pt too high) has occurred while \output is active []
-
- [7
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
- <./res/fig/ANNgeonsObjects.png>]
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 541.
-
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ts1ptm.fd"
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-Overfull \vbox (2.369pt too high) has occurred while \output is active []
-
- [8
-
-]
-("C:\dev\workspace\Master-projects\research-emotion-detection-in-voice\build\Pr
-oiect .aux")
-
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4757 strings out of 493323
- 63943 string characters out of 3139051
- 132873 words of memory out of 3000000
- 8157 multiletter control sequences out of 15000+200000
- 143723 words of font info for 163 fonts, out of 3000000 for 9000
+ 4710 strings out of 493323
+ 63373 string characters out of 3139051
+ 142677 words of memory out of 3000000
+ 8114 multiletter control sequences out of 15000+200000
+ 160931 words of font info for 177 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,19n,27p,913b,376s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,19n,26p,1420b,352s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cme
-xtra/cmmib8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
-6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/u
-hvbo8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/urw/times/utmri8a.pfb>
-Output written on "C:\dev\workspace\Master-projects\research-emotion-detection-
-in-voice\build\Proiect .pdf" (8 pages, 1717348 bytes).
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+urw/times/utmr8a.pfb>
+Output written on "C:\dev\workspace\Master-projects\research-speech-emotion-rec
+ognition\build\Proiect .pdf" (5 pages, 603044 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
+ 79 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
