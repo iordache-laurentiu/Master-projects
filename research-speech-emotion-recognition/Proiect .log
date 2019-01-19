@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  20 MAY 2018 23:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  3 JAN 2019 20:49
 entering extended mode
 **"./Proiect .tex"
 ("Proiect .tex"
@@ -950,12 +950,12 @@ File: res/fig/pad-model-3D.png Graphic file (type png)
 <use res/fig/pad-model-3D.png>
 Package pdftex.def Info: res/fig/pad-model-3D.png  used on input line 94.
 (pdftex.def)             Requested size: 226.79846pt x 178.56691pt.
-<res/fig/clasificare-caracteristicilor.png, id=15, 398.48875pt x 362.35374pt>
+<res/fig/clasificare-caracteristicilor.png, id=15, 402.50375pt x 322.20375pt>
 File: res/fig/clasificare-caracteristicilor.png Graphic file (type png)
 <use res/fig/clasificare-caracteristicilor.png>
 Package pdftex.def Info: res/fig/clasificare-caracteristicilor.png  used on inp
 ut line 130.
-(pdftex.def)             Requested size: 214.20154pt x 194.77792pt.
+(pdftex.def)             Requested size: 214.20154pt x 171.4653pt.
 
 Overfull \vbox (2.369pt too high) has occurred while \output is active []
 
@@ -996,50 +996,73 @@ pdfTeX warning: pdflatex: pop empty color page stack 0
 File: res/fig/GMM.png Graphic file (type png)
 <use res/fig/GMM.png>
 Package pdftex.def Info: res/fig/GMM.png  used on input line 211.
-(pdftex.def)             Requested size: 226.79846pt x 129.93314pt.
+(pdftex.def)             Requested size: 201.60077pt x 115.49562pt.
 <res/fig/HMM.png, id=32, 493.845pt x 284.56313pt>
 File: res/fig/HMM.png Graphic file (type png)
 <use res/fig/HMM.png>
 Package pdftex.def Info: res/fig/HMM.png  used on input line 225.
-(pdftex.def)             Requested size: 226.79846pt x 130.68352pt.
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 243.
+(pdftex.def)             Requested size: 201.60077pt x 116.1636pt.
+<res/fig/rata-de-recunoastere-in-functie-de-numarul-de-stari.png, id=33, 334.24
+875pt x 177.66376pt>
+File: res/fig/rata-de-recunoastere-in-functie-de-numarul-de-stari.png Graphic f
+ile (type png)
+<use res/fig/rata-de-recunoastere-in-functie-de-numarul-de-stari.png>
+Package pdftex.def Info: res/fig/rata-de-recunoastere-in-functie-de-numarul-de-
+stari.png  used on input line 235.
+(pdftex.def)             Requested size: 252.0pt x 133.94962pt.
+<res/fig/data-set.png, id=34, 456.5055pt x 243.309pt>
+File: res/fig/data-set.png Graphic file (type png)
+<use res/fig/data-set.png>
+Package pdftex.def Info: res/fig/data-set.png  used on input line 248.
+(pdftex.def)             Requested size: 252.0pt x 134.31042pt.
 
+Overfull \vbox (2.369pt too high) has occurred while \output is active []
 
-("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ts1ptm.fd"
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-Underfull \hbox (badness 3623) in paragraph at lines 249--250
+ [4 <./res/fig/GMM.png> <./res/fig/HMM.png> <./res/fig/rata-de-recunoastere-in-
+functie-de-numarul-de-stari.png> <./res/fig/data-set.png>]
+\width=\dimen127
+<res/fig/precizia-medie-a-recunoasterii-emotiilor.png, id=42, 496.254pt x 257.1
+6075pt>
+File: res/fig/precizia-medie-a-recunoasterii-emotiilor.png Graphic file (type p
+ng)
+<use res/fig/precizia-medie-a-recunoasterii-emotiilor.png>
+Package pdftex.def Info: res/fig/precizia-medie-a-recunoasterii-emotiilor.png  
+used on input line 299.
+(pdftex.def)             Requested size: 252.0pt x 130.58519pt.
+
+Underfull \hbox (badness 3623) in paragraph at lines 326--327
 []\T1/ptm/m/n/8 Björn Schuller, Ger-hard Rigoll, and Man-fred Lang: ``HID-DEN
  []
 
 
 Overfull \vbox (2.369pt too high) has occurred while \output is active []
 
- [4 <./res/fig/GMM.png> <./res/fig/HMM.png>] ("Proiect .aux") ) 
+ [5 <./res/fig/precizia-medie-a-recunoasterii-emotiilor.png>] ("Proiect .aux") 
+) 
 Here is how much of TeX's memory you used:
- 4664 strings out of 493305
- 64558 string characters out of 3130237
- 137633 words of memory out of 3000000
+ 4665 strings out of 493305
+ 64972 string characters out of 3130237
+ 137675 words of memory out of 3000000
  8082 multiletter control sequences out of 15000+200000
- 159013 words of font info for 176 fonts, out of 3000000 for 9000
+ 160931 words of font info for 177 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,19n,26p,1420b,352s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Laur/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/Laur/App
-Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Use
-rs/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.
-pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmr9.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmsy7.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Laur/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/Laur/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Laur/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/Laur/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on "Proiect .pdf" (4 pages, 446110 bytes).
+{C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<
+C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmmi7.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmmi9.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr9.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Laur/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Laur/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Laur/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/Lau
+r/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Use
+rs/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb>
+<C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.p
+fb>
+Output written on "Proiect .pdf" (5 pages, 601152 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
+ 79 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
