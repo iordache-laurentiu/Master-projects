@@ -6,8 +6,13 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage[utf8]{inputenc}
+\usepackage[romanian,english]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{multirow}
+\usepackage{float}
+\usepackage{caption}
+
+\restylefloat{table}
 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
@@ -30,7 +35,7 @@ SAAS - Software as a service;
 PP - Press to press; 
 RR - Release to release; 
 RP - Release to press;
-wpm - words per minuteș
+wpm - words per minute
 \end{IEEEkeywords}
 
 
@@ -47,47 +52,50 @@ wpm - words per minuteș
 
 
 \subsection{Generalități biometrie}
+	Cuvântul biometrie provine din cuvintele grecești „bios” (viață) și „metrikos” (măsurătoare). Aceasta reprezintă știința care se ocupă cu analiza statistică a caracteristicilor biometrice și este folosită cu succes în aplicații de securitate pentru verificarea sau identificarea persoanelor.
 
-
+	Trăsăturile biometrice pot fi împărțite în două categorii principale - fizice (fiziologice), aceastea reprezintă măsurile extrase de la părți ale corpului uman ex: amprenta, irisul, fața etc. și comportamentale, acestea reprezintă măsurile extrase din acțiuni realizate de utilizator, ex: semnătura, dinamica de apăsare a tastelor, vocea(amprenta vocală).
+	
+	
 \subsection{Dinamica apăsării tastelor}
-	Măsura biometrică a tastării este referită în literatură sub forma de „Keystroke dynamics” (dinamica apăsării tastelor). Dinamica apăsării tastelor se referă la felul în care o persoană apasă tastele unei tastaturi. Această metodă este bazată pe caracteristicile de scriere ale persoanelor cum ar fi durata apăsării unei taste, latența dintre apăsări consecutive ale tastelor, timpul dintre două apăsări consecutive și în cazul în care se poate, forța apăsării. Cele mai folositoare metrici sunt: timpul de apăsare, acesta reprezintă durata de timp a menținerii unei taste apăsate și timpul de pauză, care reprezintă durata de timp dintre eliberarea unei chei și apăsarea alteia.
+	Măsura biometrică a tastării este referită în literatură sub forma de dinamica apăsării tastelor („Keystroke dynamics”). Dinamica apăsării tastelor se referă la felul în care o persoană apasă tastele unei tastaturi. Această metodă este bazată pe caracteristicile de scriere ale persoanelor cum ar fi durata apăsării unei taste, latența dintre apăsări consecutive ale tastelor, timpul dintre două apăsări consecutive și în cazul în care se poate, forța apăsării. Cele mai folositoare metrici sunt: timpul de apăsare, acesta reprezintă durata de timp a menținerii unei taste apăsate și timpul de pauză, care reprezintă durata de timp dintre eliberarea unei chei și apăsarea alteia.
 
 
 \subsubsection{Istorie}	
 	Această metodă este derivată din ideea de indentificare a expeditorului unui cod Morse ce folosește un telegraf. Această tehnică a fost analizată în timpul celui de-al doilea război mondial și poartă numele de „fist of the sender” (pumnul expeditorului). Aceasta a fost utilizată cu succes pentru a monitoriza deplasarea trupelor pe baza recunoașterii tiparului de transmisie a expeditorului mesajului \cite{b2}.
 
+
 \subsubsection{Mecanismul psihologic}
 	Avantajul utilizării de măsuri biometrice comportamentale cum ar fi dinamica apăsării tastelor îl reprezintă faptul că acestea pot fi colecate fără ca utilizatorul în cauză să își dea seama. 
 	
-	Experimentele psihologice efectuate în ultimul secol au demostrat că sarcinile repetitive cum ar fi vorbitul, scrisul, tastarea, cântatul la pian etc. sunt controlate de un set de acțiuni. Aceste acțiuni pot fi prezise folosind un model care descrie seria de pași efectuați pentru a realiza o sarcină \cite{b3}. Sistemul motor planifică planifică și controlează mișcarea pe baza informațiilor primite ca stimuli. Acesta poate fi privit ca pe un caz special de sistem auto-organizat \cite{4}. Pe parcursul secolului 20, s-au efectuat studii pentru ințelegerea fiziologiei și psihologiei deprinderilor sistemului motor. Studiile s-au axat asupra transmiterilor telegrafice. Studiile s-au efectuat pe 32 de subiecți cu nivel variat al deprinderii de telegrafiere. S-a observat că operatorii erau capabili să îi recunoască pe ceilalți operatori cu care au mai lucrat dor prin ascultarea caracteristicii de tastare, de asemenea, mulți dintre aceștia au susținut că erau capabili să determine și sexul operatorului \cite{b3}. 
+	Experimentele psihologice efectuate în ultimul secol au demostrat că sarcinile repetitive cum ar fi vorbitul, scrisul, tastarea, cântatul la pian etc. sunt controlate de un set de acțiuni. Aceste acțiuni pot fi prezise folosind un model care descrie seria de pași efectuați pentru a realiza o sarcină \cite{b3}. Sistemul motor planifică și controlează mișcarea pe baza informațiilor primite ca stimuli. Acesta poate fi privit ca pe un caz special de sistem auto-organizat \cite{4}. Pe parcursul secolului 20, s-au efectuat studii pentru ințelegerea fiziologiei și psihologiei deprinderilor sistemului motor. Studiile s-au axat asupra transmiterilor telegrafice. Acestea s-au efectuat pe 32 de subiecți cu nivel variat al deprinderii de telegrafiere. S-a observat că operatorii erau capabili să îi recunoască pe ceilalți operatori cu care au mai lucrat doar prin ascultarea caracteristicii de tastare, de asemenea, mulți dintre aceștia au susținut că erau capabili să determine și sexul operatorului \cite{b3}. 
 	
 \begin{figure}[htb]
 \includegraphics[width=0.9\columnwidth]{res/fig/modelul-cooper}
-\caption{ \cite{b5}}
+\caption{Modelul general de tranzit al informației \cite{b5}.}
 \label{fig1}
 \end{figure}
 
-	În figura 1 se poate observa modelul propus de W. E. Cooper, acesta reprezintă primul model general de tranzit al informației primite de un dactilograf, fiind împărțit pe etape pornind de la citirea textului până la transpunerea acestuia prin intermediul tastaturii. Prima etapă o reprezintă recunoașterea caracterelor. În această etapă s-a observat că dactilograful tinde să analizeze în avans materialul pe care îl scrie.
+	În figura 1 este prezentat modelul propus de W. E. Cooper, acesta reprezintă primul model general de tranzit al informației primite de un dactilograf, fiind împărțit pe etape pornind de la citirea textului până la transpunerea acestuia prin intermediul tastaturii. Prima etapă o reprezintă recunoașterea caracterelor. În această etapă s-a observat că dactilograful tinde să analizeze în avans materialul pe care îl citește.
 
-
-	A doua etapă constă în analizarea informațiilor citite. În această etapă, informațiile citite sunt stocate în memorie pentru o perioadă scurtă înainte de a fi scrise de mână. Conversia textului citit în acțiunea de tastare constă într-o combinație de procesări seriale și paralele ale informației. S-a observat că dactilografii împart textul în grupuri mici și predictibile datorită limitării memoriei \cite{b6}.
+	A doua etapă constă în analizarea informațiilor citite. În această etapă, informațiile citite sunt stocate în memorie pentru o perioadă scurtă înainte de a fi scrise la tastatură. Conversia textului citit în acțiunea de tastare constă într-o combinație de procesări seriale și paralele ale informației. S-a observat că dactilografii împart textul în grupuri mici și predictibile datorită limitării memoriei \cite{b6}.
 
 	A treia etapă o reprezintă translația caracterelor discrete în comenzi. Aceasta cuprinde acțiunea musculară efectuată pentru a executa mișcarea corectă a mâinii și a degetelor. S-a observat că succesiunea acțiunilor de mișcare a dactilografilor supuși experimentului este organizată înainte ca aceasta să fie executată și că aceasta este puternic influențată de starea actuală a subiectului. 
 	
-	A patra etapă constă în execuția efectivă a tastării urmată de un răspuns. În urma tastării, este oferit un răspuns vizual auditiv sau tactil. S-a observat și analizat semi-autonomia mișcării degetelor, aceasta fiind o acțiune care odata inițiată, nu mai poate fi oprită, ritmul și caracteristicile acesteia neputând fi falsificate. 
+	A patra etapă constă în execuția efectivă a tastării. S-a observat și analizat semi-autonomia mișcării degetelor, aceasta fiind o acțiune care odata inițiată, nu mai poate fi oprită, ritmul și caracteristicile acesteia neputând fi modificate voit. 
 
 
 
 \section{Achiziția datelor}
-	Pentru achiziția datelor se pot utiliza mai multe dispozitive cum ar fi: tastatura clasică utilizată pentru scriere, un tip special de tastatură care poate înregistra presiunea apăsării (deși această presiune poate fi aproximată pe baza timpului în care o tastă este apăsată), sau utilizarea unui ecran cu touchscreen, în cazul dispozitivelor mobile. Pe parcursul procesului de înrolare în sistem vor fi salvate diverse măsuri de timp precum și fraza unică tastată de utilizator (parola). După înrolarea acestuia, utilizatorul se va putea autentifica folosind parola și alți identificatori. Această informație va fi comparată de sistem cu parola existentă ca în cazul unui sistem clasic de autentificare dar se va verifica să coincidă și modul în care acesta a scris parola.
+	Pentru achiziția datelor se pot utiliza mai multe dispozitive cum ar fi: tastatura clasică utilizată pentru scriere, un tip special de tastatură care poate înregistra presiunea apăsării, sau utilizarea unui ecran cu touchscreen, în cazul dispozitivelor mobile. Pe parcursul procesului de înrolare în sistem vor fi salvate diverse măsuri de timp precum și fraza unică tastată de utilizator (parola). După înrolarea acestuia, utilizatorul se va putea autentifica folosind parola și alți identificatori. Această informație va fi comparată de sistem cu parola existentă ca în cazul unui sistem clasic de autentificare dar se va verifica să coincidă și modul în care acesta a scris parola.
 	
 	
 \subsection{Introducerea textului}
 	Analiza dinamicii apăsării tastelor poate fi clasificată pe larg în două tipuri în funcție de tipul textului introdus - analiză a textului static sau structurat și analiza textului liber. 
 	
-	Analiza textului static implică analiza comportamentului de tastare a unui individ pentru fraze predeterminate într-un interval de timp bine definit. De exemplu, se poate considera analiza statică în momentul autentificării unui utilizator în sistem pe baza analizei dinamicii tastării id-ului și a parolei acestuia. Dar se mai  poate și analiza unei fraze particulare care este comună pentru fiecare utilizator al sistemului. Utilizarea analize textului static se folosește în mod normal în sistemele în care odată autentificat, nu mai sunt necesare introduceri suplimentare de date de la tastatură. Un exemplu de astfel de sistem îl reprezintă sistemul de autentificare într-un cont bancar. După autentificare, utilizatorul poate să citească datele tranzațiilor, să transfere sume etc.
+	Analiza textului static implică analiza comportamentului de tastare a unui individ pentru fraze predeterminate într-un interval de timp bine definit. De exemplu, se poate considera analiză statică în momentul autentificării unui utilizator în sistem pe baza analizei dinamicii tastării id-ului și a parolei acestuia. Dar se mai  poate efectua și analiza unei fraze particulare care este comună pentru fiecare utilizator al sistemului. Utilizarea analizei textului static se folosește în mod normal în sistemele în care odată autentificat, nu mai sunt necesare introduceri suplimentare de date de către utilizator. Un exemplu de astfel de sistem îl reprezintă sistemul de autentificare într-un cont bancar. După autentificare, utilizatorul poate să citească datele tranzațiilor, să transfere sume etc.
 
-	Analiza textului liber sau dinamic implică o analiză continuă periodică a comportamentului de tastare. Analiza are loc inițial la autentificarea în sistem și mai are loc pe parcursul utilizării acestuia. De exemplu, se poate utiliza un sistem de analiză a textului liber pentru a garanta dacă un anumit cont sau licență este folosit de mai mult de o persoană. Această metodă având mai multă aplicabilitate în aplicații de tip SAAS - Software as a service. Datorită naturii intruzive a acestei metode pot apărea probleme de intimitate. Pentru a evita astfel de probleme, în literatură a fost propusă utilizarea combinațiilor de patru taste consecutive stocate în matrici în loc de logare integrală a informației tastate.
+	Analiza textului liber sau dinamic implică o analiză continuă periodică a comportamentului de tastare. Analiza are loc inițial la autentificarea în sistem și mai are loc pe parcursul utilizării acestuia. De exemplu, se poate utiliza un sistem de analiză a textului liber pentru a garanta dacă un anumit cont sau o anumită licență sunt folosite de mai mult de o persoană. Această metodă având mai multă aplicabilitate în cazul aplicațiilor de tip serviciu sub formă de software, SAAS („Software as a service”). Datorită naturii intruzive a acestei metode pot apărea probleme de intimitate. Pentru a le evita, în literatură a fost propusă utilizarea combinațiilor de patru taste consecutive stocate în matrici în loc de logare integrală a informației tastate în ordine cronologică.
 
 
 \subsection{Mediul de achiziție}
@@ -95,32 +103,31 @@ wpm - words per minuteș
 
 	S-au efectuat mai multe experimente pentru analiza comportamentului de scriere al utilizatorilor, pentru acestea s-a utilizat același sistem pentru fiecare utilizator într-un mediu cu o luminozitate și temperatură controlată. Un astfel de mediu este cunoscut ca mediu controlat. De asemenea pentru a se asigura că toți utilizatorii sunt acomodați cu tipul de tastatură utilizat, au fost lăsați să exerseze pe aceasta. Datele astfel colecate pot să nu fie relevante pentru condițiile actuale în care un utilizator scrie.
 	
-	Un mediu necontrolat poate fi definit ca un mediu în care sunt cunoscute parțial sau deloc caracteristicile acestuia. În astfel de medii, subiecților li s-a cerut esă realizeze achiziția datelor fie pe calculatoarele personale sau să completeze un formular online. Este preferată analiza și testarea sistemelor în medii necontrolate pentru perfecționare, chiar dacă cest date sunt mai greu de analizat datorită numărului mare de variabile ce pot interveni. Astfel se poate obține un sistem robust care să fie folosit de utilizatorul normal în propriul mediu.
+	Un mediu necontrolat poate fi definit ca un mediu al căror caracteristici sunt cunoscute parțial sau deloc. În astfel de medii, subiecților li s-a cerut esă realizeze achiziția datelor fie pe calculatoarele personale sau să completeze un formular online. Este preferată analiza și testarea sistemelor în medii necontrolate pentru perfecționare, chiar dacă aceste date sunt mai greu de analizat datorită numărului mare de variabile ce pot interveni. Astfel se poate obține un sistem robust care să fie folosit de utilizatorul normal în propriul mediu.
 	
 	
 \subsection{Caracteristici}
-	În timpul scrierii, calculatorul poate înregistra tasta apăsată și timpul la care a fost apăsată, de asemenea, mai poate înregistra și timpul la care aceasta a fost eliberată și perioada de timp cât a fost apăsată, aceasta reprezentând diferența dintre primele două. În figura 2 sunt prezentate aceste informații temporale. Toate aceste informații pot fi stocate în timp ce un utilizator tastează.
+	În timpul scrierii, calculatorul poate înregistra tasta apăsată și timpul la care aceasta a fost apăsată, de asemenea, mai poate înregistra și timpul la care aceasta a fost eliberată și perioada de timp cât a fost menținută apăsarea, aceasta reprezentând diferența dintre primele două. În figura 2 sunt prezentate aceste informații temporale. Toate aceste informații pot fi stocate în timp ce un utilizator tastează.
 	
 \begin{figure}[htb]
-\includegraphics[width=0.9\columnwidth]{res/fig/keystroke-timing-information}
-\caption{ \cite{b3}}
+\includegraphics[width=\columnwidth]{res/fig/caracteristici-extrase}
+\caption{ Caracteristici extrase din dinamica apăsării tastelor\cite{b3}}
 \label{fig2}
 \end{figure}
 
-	Latența reprezintă una dintre cele mai folosite caracteristici. Există trei astfel de latențe definite [9] - „press-to-press” PP(latența dintre două apăsări consecutive), „release-to-release” RR(latența dintre două eliberări consecutive), „release-to-press” RP (latența dintre o eliberare și o apăsare consecutive). Acestea trei mai sunt referite în literatură și sub alte nume, de exemplu, timpul dintre două apăsări consecutive mai este întâlnit sub forma de digraf, perioada de timp dintre eliberarea unei taste și apăsarea alteia se mai numește și „flight-time” (FT) (timp de zbod). S-a observat că este mai importantă latența de apăsare decât decât latența dintre apăsarea a două taste succesive \cite{b3}. 
+	Latența reprezintă una dintre cele mai folosite caracteristici. Există trei astfel de latențe definite [9] - latența dintre două apăsări consecutive, PP („press-to-press” ), latența dintre două eliberări consecutive RR („release-to-release”), latența dintre o eliberare și o apăsare consecutivă RP („release-to-press”). Acestea trei mai sunt referite în literatură și sub alte nume, de exemplu, timpul dintre două apăsări consecutive mai este întâlnit sub forma de digraf, perioada de timp dintre eliberarea unei taste și apăsarea alteia se mai numește și timp de zbor (FT) („flight-time”). S-a observat că este mai importantă latența de apăsare decât decât latența dintre apăsarea a două taste succesive \cite{b3}. De asemenea, latența dintre eliberarea unei taste și apăsarea alteia este de asemenea importantă deoarece aceasta este adesea dependentă de distanța dintre taste. 
 		
 	Pe baza acestor latențe se pot compune alte caracteristici, cum ar fi trigraful care reprezintă durata de timp necesară apăsării a trei taste consecutive, N-graful care reprezintă durata de timp necesară apăsării a N taste consecutive. S-a observat că utilizarea trigrafurilor oferă rezultate mai bune de clasificare decât în cazul utilizarii digrafurilor sau a N-grafurilor. 
 		
-	Pe lângă caracteristicile de timp, mai pot fi extrase și caracteristici de presiune. Acestea sunt extrase cu ajutorul unor tastaturi speciale ce permit măsurarea presiunii exercitate de utilizator la apăsarea unei taste. Aceste metrici au fost utilizate în încercarea a analizare a emoțiilor utilizatorului.
+	Pe lângă caracteristicile de timp, mai pot fi extrase și caracteristici de presiune. Acestea sunt extrase cu ajutorul unor tastaturi speciale ce permit măsurarea presiunii exercitate de utilizator la apăsarea unei taste. Aceste metrici au fost utilizate în încercarea de analizare a emoțiilor utilizatorului.
 
-	Alte caracteristici secundare care pot fi derivate din caracteristicile de timp sunt viteza de scriere, aceasta este măsurată în cuvinte pe minut (wpm), viteza maximă/minimă, media și deviația standard a caracteristicelor și entropia.
+	Alte caracteristici secundare care pot fi derivate din caracteristicile de timp sunt viteza de scriere, aceasta este măsurată în cuvinte pe minut (wpm), viteza maximă și cea minimă, media și deviația standard a caracteristicelor și entropia acestora.
 	
 
 \subsection{Metrici de performanță}
-	În procesul de autentificare/verificare, se extrag datele din șirul de caractere introdus de utilizator pentru a crea un model al modului de tastare. Acest model este apoi comparat cu unul existent pentru utilizatorul respectiv, creat în momentul înrolării în sistem. Pentru comparare se folosește un algoritm care determină cât este de similar modelul nou creat cu cel existent în baza de date. Pentru procesul de identificare, verificarea este un proces de tip one-to-many, acesta constă în compararea modelului nou creat cu toate modelele din baza de date pentru a identifica utilizatorul.
+	În procesul de autentificare/verificare, se extrag datele din șirul de caractere introdus de utilizator pentru a crea un model al modului de tastare. Acest model este apoi comparat cu unul existent pentru utilizatorul respectiv, creat în momentul înrolării în sistem. Pentru comparare se folosește un algoritm care determină cât este de similar modelul nou creat cu cel existent în baza de date. Iar pentru procesul de identificare, compararea realizată este un proces de tip one-to-many, acesta constă în compararea modelului nou creat cu toate modelele din baza de date pentru a realiza identificarea utilizatorul.
 	
-	Pentru determinarea unui sistem biometric de autentificare utilizează două rate de eroare importante
-- Rata de respingere falsă ,FRR („False Rejection Rate”) și rata de acceptare falsă, Far („False Acceptance Rate”). Acestea sunt reprezentate de următoarele rapoarte:
+	Pentru determinarea preciziei unui sistem biometric de autentificare se utilizează două rate de eroare importante - Rata de respingere falsă ,FRR („False Rejection Rate”) și rata de acceptare falsă, Far („False Acceptance Rate”).
 
 
 FRR reprezintă probabilitatea ca un sistem biometric să nu recunoască identitatea unui utilizator autorizat. Se definește ca fiind raportul dintre numărul de respingeri false și numărul total de încercări legitime de identificare a unui utilizator autentificat \cite{b7}.
@@ -139,24 +146,51 @@ Unde: $f_n$ - numărul de respingeri false; $f_p$ - numărul de acceptări false
 
 	Se mai utilizează și măsura EER „Equal Error Rate” care reprezintă punctul de intersecție al curbelor trasate pentru FAR și FRR. Cu alte cuvinte $ERR = FAR = FRR$. Aceasta este utilizată pe post de indicator al preciziei sistemului biometric.
 	
-	Uzual, pentru sisteme biometrice în care securitatea nu este o prioritate, se permit valori mai mari ale FAR-ului însă în aplicații cu un nivel ridicat de securitate se preferă valori ridicate ale FRR-ului dar foarte scăzute lare FAR-ului. Cu cât este mai scăzută valoarea ERR-ului, cu atât sistemul biometric este mai precis.
+	Uzual, pentru sisteme biometrice în care securitatea nu este o prioritate, se permit valori mai mari ale FAR-ului fază de cele ale FRR-ului însă în aplicații cu un nivel ridicat de securitate se preferă valori ridicate ale FRR-ului dar foarte scăzute lare FAR-ului. Cu cât este mai scăzută valoarea ERR-ului, cu atât sistemul biometric este mai performant.
 
-\subsection{Baza de date}
+\subsection{Baze de date}
 % Enumerarea unor baze de date ce au fost achiziționate în medii controlate și în medii necontrolate.
 	Lipsa de standardizare a achiziției datelor reprezintă pentru acest tip de măsură biometică un impediment în dezvoltare. Adoptarea de standarde ar trebui să faciliteze schimbul de informații între cercetători  și să ofere o mai bună metodă de comparare a diferiților algoritmi. Astfel se va reduce cu siguranță duplicarea efortului depus.
 	În tabelul 1 sunt listate o parte din bazele de date făcute disponibile de anumiți cercetători. 
+\\
+
+\begin{table}[H]
+	\begin{tabular}[c]{lcccc}
+	\hline
+	Bază de date 							 & TT  &  S &       M \\
 	
-// TODO: De listat toate bazele de date în tabel și de discutat pe marginea lor.
+	\hline
+	Jugurta and Freire   \cite{b8}      		   & S   & 32 &    320 \\ 
+	Jugurta and Freire   \cite{b8}      		   & D   & 15 &    150 \\ 
+	Killourhy and Maxion \cite{b9}      		   & S   & 51 &  20400 \\ 
+	Giot et al.			 \cite{b10}	    	 	   & S   &133 &   7555 \\ 
+	Allen				 \cite{b11}	    	 	   & S   &104 &   2379 \\ 
+	Bello et al.		 \cite{b12}	    	 	   & S   & 54 & 282020 \\ 
+	CMU \cite{b13}  					 	 	   & S   & 51 &  20400 \\
+	CMU Free vs. Transcribed Text \cite{b14} 	   & D/S & 20 & 	 - \\
+	BeiHang \cite{b15}						 	   & S   &117 &   2661 \\
+	Stonybrook  \cite{b16}					 	   & D   &196 & 	 - \\
+	Keystroke100 Dataset \cite{b17, b18}           & S   &100 &	  2000 \\
+	\hline
+	\end{tabular}
+	
+\caption{ 
+Baze de date făcute publice de anumite colective de cercetători.
+\\
+TT - tipul de text; S - Subiecți; M - mostre;
+\\
+S - static; D - dinamic;
+}
+\end{table}
 
 \section{Abordări și rezultate}
-	Odată extrase caracteristicile și create modelele, clasificarea utilizatorilor este realizată pe baza asemănărilor și deosebirilor dintre aceste modele. În literatură s-au utilizat de la metode simple derivate din statistică cum ar fi media și deviația standard provenite din statisica până la metode complexe de recunoaștere a acestora pentru clasificarea scriitorului. Algoritmii de clasificare s-au împărțit în patru categorii \cite{b7}.
+	Odată extrase caracteristicile și create modelele, clasificarea utilizatorilor este realizată pe baza asemănărilor și deosebirilor dintre aceste modele. În literatură s-au utilizat de la metode simple derivate din statistică cum ar fi media și deviația standard provenite din statisica până la metode complexe de recunoaștere a acestora pentru clasificarea scriitorului. Algoritmii de clasificare pot fi împărțiți în patru categorii \cite{b3}.
 
 \subsection{Algoritmi statistici}
-	Cea mai simplă metodă statistică constă în calcularea mediei și deviației standard ale caracteristicilor modelului. Acestea pot fi folosite pentru compararea utilizatorilor folosind diverse modalități de testare cum ar fi: testarea ipotezei, t-tests și folosirea distanțelor cum ar fi distanța absolută, distanța Euclideană și a altor tipuri. În tamelul 2 pot fi vizualizate diverse abordări cu rezultatele acestora.
-\\
+	Cea mai simplă metodă statistică constă în calculul mediei și deviației standard ale caracteristicilor modelului. Acestea pot fi folosite pentru compararea utilizatorilor folosind diverse modalități de testare cum ar fi: testarea ipotezei, t-tests și folosirea distanțelor cum ar fi distanța absolută, distanța Euclideană și a altor tipuri de distanțe. În tabelul 2 pot fi vizualizate diverse abordări cu rezultatele acestora.
 \\
 
-\begin{table}
+\begin{table}[H]
 	\begin{tabular}[c]{lcccccccc}
 	\hline
 	\multirow{2}{*}{Clasificare} & \multirow{2}{*}{TT} & \multirow{2}{*}{Env} & \multirow{2}{*}{S} & \multirow{2}{*}{M} & \multicolumn{3}{c}{Error rate (\%)} \\
@@ -165,37 +199,93 @@ Unde: $f_n$ - numărul de respingeri false; $f_p$ - numărul de acceptări false
 	\hline
 	Distanță abs. & S & C & 33 & 975 & 0.25 & 16.67 & - \\
 	Distanță min. & S & C & 39 & 171 & 2.8  &  8.1  & - \\
-	Distanță      & D & U & 30 &  -  & 8.33 &  3.33 & - \\
+	Distanță      & D & N & 30 &  -  & 8.33 &  3.33 & - \\
 	Statistică    & D & C & 30 & 60  &15    &  0    & - \\
 	Statistică    & S & C & 44 &220  & 0    &  2.3  & - \\
 	Statistică    & S & C & 30 &553  & 1.89 &  1.45 & - \\
 	\hline
 	\end{tabular}
 	
-\caption*{
-  A legend, even a table can be used
-  \begin{tabular}{l l}
-    item 1 & explanation 1 \\
-  \end{tabular}
-  }
+\caption{
+TT - tipul de text; Env - mediu; S - Subiecți; M - mostre;
+\\
+S - static; D - dinamic; C - Controlat; N - Necontrolat.}
 \end{table}
 
+\subsection{Rețele neurale}
+	Rețelele neurale reprezintă mijloace de modelare statistică nelineară adaptivă, acestea sunt inspirate din interconexiunea biologică a neuronilor. Există două modalități în care ponderile pot fi asociate (învățate) - înățare supervizată și învățare nesupervizată. Pentru clasificarea măsurilor extrase din dinamica de apăsare a tastelor, în literatură s-au utilizat metode cum ar fi: perceptron, suma de produse (SOP), Adaline, arhitecturi de rețele neurale, backpropagation etc. \cite{b3}.
+	În urma testării diferitelor arhitecturi de rețele neurale cum ar fi backpropagation, suma de produse sau sumă de produse hibridă s-au obținut rate de identificare de până la 97.8\% \cite{b3}. În tabelul 3 sunt prezentate metrici de performanță pentru diverși algoritmi utilizați pentru realizarea comparației.
+\\
+
+\begin{table}[H]
+	\begin{tabular}[c]{lcccccccc}
+	\hline
+	\multirow{2}{*}{Clasificare} & \multirow{2}{*}{TT} & \multirow{2}{*}{Env} & \multirow{2}{*}{S} & \multirow{2}{*}{M} & \multicolumn{3}{c}{Error rate (\%)} \\
+	\cline{6-8}
+            &    &     &   &   &  FAR & FRR & EER \\
+	\hline
+	Perceptron	      & S & C &  24 & 1400 &   8   &  9 & - \\
+	Adaline (RN)	  & S & C &  46 & 1867 & 17.4  &  0 & - \\
+	Rețele neurale	  & S & C &  15 & 2100 &  8    &  7 & - \\
+	BP-RN			  & S & C & 151 &    - &  1.11 &  0 & - \\
+	
+	\hline
+	\end{tabular}
+	
+\caption{
+TT - tipul de text; Env - mediu; S - Subiecți; M - mostre;
+\\
+S - static; D - dinamic; C - Controlat; N - Necontrolat.}
+\end{table}
+
+
+\section{Factori ce afectează performanța sistemului}
+	Deși teoretic nu se poate copia tiparul de scriere al unui utilizator, în practică s-a demonstrat că parolele cu puține caractere pot fi imitate cu succes. O bună analogie poate fi realizată cu semnătura realizată de o persoană cu o ustensilă de scris. Aceasta cu cât este mai complexă, cu atât este mai greu de replicat. În concluzie este necesară o parolă suficient de complexă pentru a nu putea fi falsificată cu ușurință. De asemenea, utilizarea unei parole complexe, permite o mai bună analiză a utilizatorului în momentul înrolării în sistem. 
+	
+	În cazul scrierii libere, o problemă pentru utilziatorul normal o reprezintă variația vitezei de scriere. S-au observat variații puternice în compararea aceluiași utilizator care realizează scriere liberă și scierea unui text static predefinit. Un motiv al acestei variații o reprezintă latența introdusă de incertitudinea în planificarea datelor ce urmează a fi scrise. În schimb, la dactilografii profesioniști s-a remarcat o bună comparare a celor două cazuri\cite{b3}.
+	
+	Starea emoțională a utilizatorului poate influența viteza de scriere. S-a observat o scădere de 70\% a vitezei de scriere în cazul subiecților cu o stare negativă și o creștere de 83\% în cazul utilizatorilor care au o stare pozitivă \cite{b3}. De asemenea, viteza de scriere mai poate fi influențată și de starea de sănătate, poziția în care se realizează tastarea.
+	%%%%
 
 \begin{thebibliography}{00}
 
 \bibitem{b1} https://www.internetworldstats.com/stats.htm
 
-\bibitem{b2} L. F. Coppenrath and Associates. „Biopassword Technology Overview”, http://www.lfca.net/Reference\%20Documents/Biometric\%20Solutions\%20By\%20Classification.pdf
+\bibitem{b2} L. F. Coppenrath and Associates. „Biopassword Technology Overview”, http://www.lfca.net/Reference\%20Documents/Biometric\%20Solutions \%20By\%20Classification.pdf
 
 \bibitem{b3} Salil P. Banerjee, Damon L. Woodard: „ Biometric Authentication and Identification using Keystroke Dynamics: A Survey”
 
-\bibitem{b4} L. Shaffer. Tutorials in Motor Neuroscience, chapter Cognition and Motor Programming.
-Kluwer Academic Publishers, 1991.
+\bibitem{b4} L. Shaffer. Tutorials in Motor Neuroscience, chapter Cognition and Motor Programming. Kluwer Academic Publishers, 1991.
 
 \bibitem{b5} T. A. Salthouse. Perceptual, Cognitive, and Motoric Aspects of Transcription Typing. Psychological Bulletin, 99(3):303 – 319, 1986.
 
 \bibitem{b6} K. S. Balagani, V. V. Phoha, A. Ray, and S. Phoha. On the Discriminability of Keystroke Feature Vectors Used in Fixed Text Keystroke Authentication. Pattern Recognition Letters, 32:10701080, 2011.
 
 \bibitem{b7} TODO: TBRSD - Curs de adăugat ref
+
+\bibitem{b8} Jugurta R.M.F. and Freire O.E. On the equalization of keystroke timing histograms. Pattern Recognition Letters, 27:1440–1446, October 2006.
+
+\bibitem{b9} K. S. Killourhy and R. A. Maxion. Comparing Anomaly-Detection Algorithms for Keystroke Dynamics. In IEEE/IFIP International Conference on Dependable Systems Networks, pages 125–134, July 2009
+
+\bibitem{b10} R. Giot, M. El-Abed, and C. Rosenberger. GREYC keystroke: A benchmark for keystroke dynamics biometric systems. In IEEE 3rd International Conference on Biometrics: Theory, Applications, and Systems, pages 1 –6, Sept. 2009.
+
+\bibitem{b11} J. D. Allen. An Analysis of Pressure-Based Keystroke Dynamics Algorithms. Master’s thesis,
+Southern Methodist University, Dallas, TX, U.S.A., May 2010.
+
+\bibitem{b12} L. Bello, M. Bertacchini, C. Benitez, J. C. Pizzoni, and M. Cipriano. Collection and Publication of a Fixed Text Keystroke Dynamics Dataset. In CACIC’10, October 2010.
+
+\bibitem{b13} Kevin S. Killourhy and Roy A. Maxion. "Comparing Anomaly Detectors for Keystroke Dynamics," in Proceedings of the 39th Annual International Conference on Dependable Systems and Networks (DSN-2009), pages 125-134, Estoril, Lisbon, Portugal, June 29-July 2, 2009. IEEE Computer Society Press, Los Alamitos, California, 2009.
+
+\bibitem{b14} Kevin S. Killourhy and Roy A. Maxion. Free vs. transcribed text for keystroke-dynamics evaluations. In Learning from Authoritative Security Experiment Results (LASER-2012), July 18–19, 2012, Arlington, VA, 2012. ACM Press.
+
+\bibitem{b15} Yilin Li, Baochang Zhang, Yao Cao, Sanqiang Zhao, Yongsheng Gao, Jianzhuang Liu. "Study on the BeiHang Keystroke Dynamics Database". International Joint Conference on Biometrics (IJCB), pp.1-5, 2011.
+
+\bibitem{b16} Keystroke Patterns as Prosody in Digital Writings: A Case Study with Deceptive Reviews and Essays Ritwik Banerjee, Song Feng, Jun S. Kang, Yejin Choi Empirical Methods on Natural Language Processing (EMNLP). 2014.
+
+\bibitem{b17} Keystroke Patterns Classification using the ARTMAP-FD Neural Network C. C. Loy, W. K. Lai, and C. P. Lim International Conference on Intelligent Information Hiding and Multimedia Signal Processing, Taiwan, 2007 (IIHMSP 2007) 
+
+\bibitem{b18}Pressure-based Typing Biometrics User Authentication Using The Fuzzy ARTMAP Neural Network C. C. Loy, C. P. Lim, and W. K. Lai International Conference on Neural Information Processing, Taiwan, 2005 (ICONIP 2005) 
+
+\bibitem{b19} John V. Monaco, Charles C Tappert. The Partially Observable Hidden Markov Model and its Application to Keystroke Dynamics. Pattern Recognition, 2017.
 \end{thebibliography}
 \end{document}

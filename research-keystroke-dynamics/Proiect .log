@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  20 JAN 2019 16:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  25 JAN 2019 15:58
 entering extended mode
 **"./Proiect .tex"
 ("Proiect .tex"
@@ -714,8 +714,40 @@ File: ts1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+2026 (decimal 8230)
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
-)) ("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc.sty
-"
+)) ("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.st
+y"
+Package: babel 2018/02/14 3.18 The Babel package
+("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\switch.def"
+File: switch.def 2018/02/14 3.18 Babel switching mechanism
+)
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-romanian\roma
+nian.ldf"
+Language: romanian 2005/03/31 v1.2l Romanian support from the babel system
+
+("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2018/02/14 3.18 Babel common definitions
+\babel@savecnt=\count116
+\U@D=\dimen125
+
+("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\txtbabel.de
+f")
+\bbl@dirlevel=\count117
+))
+("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-english\engli
+sh.ldf"
+Language: english 2017/06/06 v3.3r English support from the babel system
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
 
 ("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.def"
@@ -731,46 +763,100 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ty"
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@colwidth=\skip54
-\multirow@cntb=\count116
+\multirow@cntb=\count118
 \multirow@dima=\skip55
-\bigstrutjot=\dimen125
-) ("Proiect .aux")
+\bigstrutjot=\dimen126
+) ("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count119
+\float@exts=\toks23
+\float@box=\box30
+\@float@everytoks=\toks24
+\@floatcapt=\box31
+)
+("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty
+"
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+
+("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.st
+y"
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen127
+\captionmargin@=\dimen128
+\captionwidth=\dimen129
+\caption@tempdima=\dimen130
+\caption@indent=\dimen131
+\caption@parindent=\dimen132
+\caption@hangindent=\dimen133
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\fontencoding {T1} \fon
+tfamily {phv} \fontseries {m} \fontshape {n} \fontsize {8}{10} \selectfont \scs
+hape \ifx \@captype \@IEEEtablestring \@IEEEtablecaptionsabspace \begin {center
+} \if@myimage \ifdim \width > 255pt {\strut #1\color {black}}\\ {\footnotesize 
+\scshape \if \boldmath #2\color {black}\null \else \strut \stupiddouble {\boldm
+ath #2\color {black}\normalcolor }\fi } \else {\strut #1\color {black}}\\ {\foo
+tnotesize \scshape \if \boldmath #2\color {black}\null \else \strut \stupidsing
+le {\boldmath #2\color {black}\normalcolor }\fi } \fi \else \ifdim \width > 255
+pt {\strut #1}\\ {\footnotesize \scshape \if \boldmath #2\null \else \strut \st
+upiddouble {\boldmath #2\color {black}}\fi } \else {\strut #1}\\ {\if \boldmath
+ #2\null \else \strut \stupidsingle {\boldmath #2\color {black}}\fi } \fi \fi \
+end {center}\@IEEEtablecaptionsbespace \else \@IEEEfigurecaptionsepspace \setbo
+x \@tempboxa \hbox {\footnotesize #1.\color {black}\normalcolor ~~\sf \boldmath
+ #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\footnotesize #1.\c
+olor {black}\normalcolor ~~ }\parbox [t]{\hsize }{\footnotesize \noindent \unhb
+ox \@tempboxa \sf \boldmath #2}\else \ifcenterfigcaptions \hbox to\hsize {\foot
+notesize \hfil \box \@tempboxa \hfil }\else \hbox to\hsize {\footnotesize \box 
+\@tempboxa \hfil }\fi \fi \fi \color {black}.
+\c@caption@flags=\count120
+\c@ContinuedFloat=\count121
+Package caption Info: float package is loaded.
+)
+\@float@every@table=\toks25
+ ("Proiect .aux")
 \openout1 = `"Proiect .aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 22.
 
 ("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    ... okay on input line 22.
 
 ("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mki
 i"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count117
-\scratchdimen=\dimen126
-\scratchbox=\box30
-\nofMPsegments=\count118
-\nofMParguments=\count119
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count120
-\MPscratchDim=\dimen127
-\MPnumerator=\count121
-\makeMPintoPDFobject=\count122
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count122
+\scratchdimen=\dimen134
+\scratchbox=\box32
+\nofMPsegments=\count123
+\nofMParguments=\count124
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count125
+\MPscratchDim=\dimen135
+\MPnumerator=\count126
+\makeMPintoPDFobject=\count127
+\everyMPtoPDFconversion=\toks27
 )
 ("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-b
 ase.sty"
@@ -836,94 +922,94 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <5> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <7> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <8> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8.5> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <8.5> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <9> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <14> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <17> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <20> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 17.
-Package color Info: Redefining color nblue on input line 21.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 21.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 22.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+Package color Info: Redefining color nblue on input line 26.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 26.
 
 ("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 21.
-LaTeX Font Info:    Try loading font information for U+msa on input line 21.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 26.
+LaTeX Font Info:    Try loading font information for U+msa on input line 26.
 
 ("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 21.
+LaTeX Font Info:    Try loading font information for U+msb on input line 26.
 
 ("C:\Users\Laur\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package color Info: Redefining color nblue on input line 21.
-Package color Info: Redefining color nblue on input line 24.
-Package color Info: Redefining color mblue on input line 24.
+Package color Info: Redefining color nblue on input line 26.
+Package color Info: Redefining color nblue on input line 29.
+Package color Info: Redefining color mblue on input line 29.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <8> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 24.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 29.
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <8> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 24.
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 29.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <8> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 24.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 29.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <5> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 25.
-Package color Info: Redefining color nblue on input line 28.
-Package color Info: Redefining color mblue on input line 28.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 30.
+Package color Info: Redefining color nblue on input line 33.
+Package color Info: Redefining color mblue on input line 33.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 28.
-LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <9> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 28.
-LaTeX Font Info:    Font shape `T1/phv/b/it' in size <9> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 28.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <6> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 33.
+LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <9> not available
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 33.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <9> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 33.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 41.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 46.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 49.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 54.
 
 
-LaTeX Warning: Citation `4' on page 1 undefined on input line 62.
+LaTeX Warning: Citation `4' on page 1 undefined on input line 71.
 
-<res/fig/modelul-cooper.png, id=1, 398.99063pt x 319.94531pt>
+<res/fig/modelul-cooper.png, id=1, 479.7925pt x 351.3125pt>
 File: res/fig/modelul-cooper.png Graphic file (type png)
 <use res/fig/modelul-cooper.png>
-Package pdftex.def Info: res/fig/modelul-cooper.png  used on input line 65.
-(pdftex.def)             Requested size: 226.79846pt x 181.86787pt.
+Package pdftex.def Info: res/fig/modelul-cooper.png  used on input line 74.
+(pdftex.def)             Requested size: 226.79846pt x 166.0657pt.
 
-LaTeX Warning: File `LOGO-generic-web.eps' not found on input line 71.
+LaTeX Warning: File `LOGO-generic-web.eps' not found on input line 84.
 
 Package epstopdf Info: Source file: <LOGO-generic-web.eps>
 (epstopdf)             Output file: <LOGO-generic-web-eps-converted-to.pdf>
@@ -931,13 +1017,13 @@ Package epstopdf Info: Source file: <LOGO-generic-web.eps>
 (epstopdf)                    size: 97256 bytes
 (epstopdf)             Command: <epstopdf --outfile=LOGO-generic-web-eps-conver
 ted-to.pdf LOGO-generic-web.eps>
-(epstopdf)             \includegraphics on input line 71.
+(epstopdf)             \includegraphics on input line 84.
 Package epstopdf Info: Output file is already uptodate.
 <LOGO-generic-web-eps-converted-to.pdf, id=3, 212.795pt x 212.795pt>
 File: LOGO-generic-web-eps-converted-to.pdf Graphic file (type pdf)
 <use LOGO-generic-web-eps-converted-to.pdf>
 Package pdftex.def Info: LOGO-generic-web-eps-converted-to.pdf  used on input l
-ine 71.
+ine 84.
 (pdftex.def)             Requested size: 48.0pt x 48.00018pt.
 
 Overfull \hbox (259.0pt too wide) has occurred while \output is active
@@ -961,58 +1047,75 @@ Overfull \vbox (41.72916pt too high) has occurred while \output is active []
 [1{C:/Users/Laur/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
-
-
-pdfTeX warning: pdflatex: pop empty color page stack 0
- <./LOGO-generic-web-eps-converted-to.pdf> <./res/fig/modelul-cooper.png>]
-<res/fig/keystroke-timing-information.png, id=18, 378.66469pt x 188.95593pt>
-File: res/fig/keystroke-timing-information.png Graphic file (type png)
-<use res/fig/keystroke-timing-information.png>
-Package pdftex.def Info: res/fig/keystroke-timing-information.png  used on inpu
-t line 105.
-(pdftex.def)             Requested size: 226.79846pt x 113.17548pt.
+ <./LOGO-generic-web-eps-converted-to.pdf>]
+<res/fig/caracteristici-extrase.png, id=17, 677.53125pt x 249.93375pt>
+File: res/fig/caracteristici-extrase.png Graphic file (type png)
+<use res/fig/caracteristici-extrase.png>
+Package pdftex.def Info: res/fig/caracteristici-extrase.png  used on input line
+ 113.
+(pdftex.def)             Requested size: 252.0pt x 92.95837pt.
 
 Overfull \vbox (2.369pt too high) has occurred while \output is active []
 
- [2 <./res/fig/keystroke-timing-information.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 155--158
+ [2 <./res/fig/modelul-cooper.png> <./res/fig/caracteristici-extrase.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 153--156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--158
+Underfull \hbox (badness 10000) in paragraph at lines 190--192
 
  []
 
-\width=\dimen128
 
-Overfull \hbox (87.28062pt too wide) in paragraph at lines 192--193
-\T1/ptm/m/n/8 http://www.lfca.net/Reference%20Documents/Biometric%20Solutions%2
-0By%20Classification.pdf 
+Underfull \hbox (badness 3977) in paragraph at lines 216--219
+[]\T1/ptm/m/n/9 Re[]elele neu-rale reprez-int  mi-jloace de mod-e-lare statis-t
+ic 
+ []
+
+
+Underfull \hbox (badness 3601) in paragraph at lines 216--219
+\T1/ptm/m/n/9 ne-lin-ear  adap-tiv , aces-tea sunt in-spi-rate din in-ter-conex
+-i-unea
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--219
+
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 205.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 219.
 
 Overfull \vbox (2.369pt too high) has occurred while \output is active []
 
  [3]
+Overfull \hbox (4.11786pt too wide) in paragraph at lines 221--234
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
+\T1/ptm/m/n/8 http://www.lfca.net/Reference%20Documents/Biometric%20Solutions
+ []
+
+
+Overfull \vbox (2.369pt too high) has occurred while \output is active []
+
+ [4]
 ("Proiect .aux")
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4667 strings out of 493305
- 64542 string characters out of 3130237
- 132134 words of memory out of 3000000
- 8092 multiletter control sequences out of 15000+200000
- 163157 words of font info for 172 fonts, out of 3000000 for 9000
+ 6361 strings out of 493305
+ 92945 string characters out of 3130237
+ 172219 words of memory out of 3000000
+ 9751 multiletter control sequences out of 15000+200000
+ 155335 words of font info for 168 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,25n,26p,1085b,400s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,25n,39p,1074b,424s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}
 <C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmmi7.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
@@ -1024,9 +1127,9 @@ ams/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Laur/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/Laur/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Laur/App
 Data/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on "Proiect .pdf" (3 pages, 294640 bytes).
+Output written on "Proiect .pdf" (4 pages, 234921 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
+ 61 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
