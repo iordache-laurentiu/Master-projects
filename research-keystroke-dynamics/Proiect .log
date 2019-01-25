@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  25 JAN 2019 15:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  26 JAN 2019 00:31
 entering extended mode
 **"./Proiect .tex"
 ("Proiect .tex"
@@ -995,21 +995,23 @@ LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <9> not available
 (Font)              Font shape `T1/phv/b/it' tried instead on input line 33.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <9> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 33.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <6> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 39.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 46.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 54.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 62.
 
 
-LaTeX Warning: Citation `4' on page 1 undefined on input line 71.
+LaTeX Warning: Citation `4' on page 1 undefined on input line 79.
 
 <res/fig/modelul-cooper.png, id=1, 479.7925pt x 351.3125pt>
 File: res/fig/modelul-cooper.png Graphic file (type png)
 <use res/fig/modelul-cooper.png>
-Package pdftex.def Info: res/fig/modelul-cooper.png  used on input line 74.
+Package pdftex.def Info: res/fig/modelul-cooper.png  used on input line 82.
 (pdftex.def)             Requested size: 226.79846pt x 166.0657pt.
 
-LaTeX Warning: File `LOGO-generic-web.eps' not found on input line 84.
+LaTeX Warning: File `LOGO-generic-web.eps' not found on input line 90.
 
 Package epstopdf Info: Source file: <LOGO-generic-web.eps>
 (epstopdf)             Output file: <LOGO-generic-web-eps-converted-to.pdf>
@@ -1017,13 +1019,13 @@ Package epstopdf Info: Source file: <LOGO-generic-web.eps>
 (epstopdf)                    size: 97256 bytes
 (epstopdf)             Command: <epstopdf --outfile=LOGO-generic-web-eps-conver
 ted-to.pdf LOGO-generic-web.eps>
-(epstopdf)             \includegraphics on input line 84.
+(epstopdf)             \includegraphics on input line 90.
 Package epstopdf Info: Output file is already uptodate.
 <LOGO-generic-web-eps-converted-to.pdf, id=3, 212.795pt x 212.795pt>
 File: LOGO-generic-web-eps-converted-to.pdf Graphic file (type pdf)
 <use LOGO-generic-web-eps-converted-to.pdf>
 Package pdftex.def Info: LOGO-generic-web-eps-converted-to.pdf  used on input l
-ine 84.
+ine 90.
 (pdftex.def)             Requested size: 48.0pt x 48.00018pt.
 
 Overfull \hbox (259.0pt too wide) has occurred while \output is active
@@ -1052,50 +1054,59 @@ Overfull \vbox (41.72916pt too high) has occurred while \output is active []
 File: res/fig/caracteristici-extrase.png Graphic file (type png)
 <use res/fig/caracteristici-extrase.png>
 Package pdftex.def Info: res/fig/caracteristici-extrase.png  used on input line
- 113.
+ 121.
 (pdftex.def)             Requested size: 252.0pt x 92.95837pt.
 
 Overfull \vbox (2.369pt too high) has occurred while \output is active []
 
  [2 <./res/fig/modelul-cooper.png> <./res/fig/caracteristici-extrase.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 153--156
+Underfull \hbox (badness 10000) in paragraph at lines 160--162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--192
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
 
 
-Underfull \hbox (badness 3977) in paragraph at lines 216--219
+Underfull \hbox (badness 3977) in paragraph at lines 219--220
 []\T1/ptm/m/n/9 Re[]elele neu-rale reprez-int  mi-jloace de mod-e-lare statis-t
 ic 
  []
 
 
-Underfull \hbox (badness 3601) in paragraph at lines 216--219
+Underfull \hbox (badness 3601) in paragraph at lines 219--220
 \T1/ptm/m/n/9 ne-lin-ear  adap-tiv , aces-tea sunt in-spi-rate din in-ter-conex
 -i-unea
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--219
+Underfull \hbox (badness 2443) in paragraph at lines 219--220
+\T1/ptm/m/n/9 performan[]  pen-tru diver[]i al-go-ritmi utiliza[]i pen-tru re-a
+lizarea
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
 
  []
 
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 219.
 
 Overfull \vbox (2.369pt too high) has occurred while \output is active []
 
  [3]
-Overfull \hbox (4.11786pt too wide) in paragraph at lines 221--234
+Overfull \hbox (7.52902pt too wide) in paragraph at lines 222--239
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--255
+Overfull \hbox (3.0021pt too wide) in paragraph at lines 254--271
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
 \T1/ptm/m/n/8 http://www.lfca.net/Reference%20Documents/Biometric%20Solutions
  []
 
@@ -1103,19 +1114,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 254--255
 Overfull \vbox (2.369pt too high) has occurred while \output is active []
 
  [4]
+Overfull \vbox (2.369pt too high) has occurred while \output is active []
+
+ [5
+
+]
 ("Proiect .aux")
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6361 strings out of 493305
- 92945 string characters out of 3130237
- 172219 words of memory out of 3000000
+ 6362 strings out of 493305
+ 92949 string characters out of 3130237
+ 179097 words of memory out of 3000000
  9751 multiletter control sequences out of 15000+200000
- 155335 words of font info for 168 fonts, out of 3000000 for 9000
+ 156127 words of font info for 169 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,25n,39p,1074b,424s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,25n,39p,1074b,503s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}
 <C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmmi7.pfb><C:/Users/Laur/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
@@ -1127,9 +1143,9 @@ ams/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Laur/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/Laur/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Laur/App
 Data/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on "Proiect .pdf" (4 pages, 234921 bytes).
+Output written on "Proiect .pdf" (5 pages, 238967 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
+ 64 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

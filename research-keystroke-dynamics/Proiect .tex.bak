@@ -17,11 +17,11 @@
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \markboth{\journalname, Cercetare științifică 3}
-{Author \MakeLowercase{\textit{et al.}}: O scurtă prezentare a metodelor de detectare a emoţiilor din semnalul vocal (Mai 2018) }
+{Author: Laurențiu - Iulian Iordache - Stoicescu }
 
 \begin{document}
-\title{Keystroke Dynamics}
-\author{Laurențiu-Iulian Iordache-Stoicescu }
+\title{Dinamica apăsării tastelor}
+\author{Laurențiu - Iulian Iordache - Stoicescu }
 
 \maketitle
 
@@ -31,11 +31,19 @@
 \end{abstract}
 
 \begin{IEEEkeywords}
-SAAS - Software as a service;
-PP - Press to press; 
-RR - Release to release; 
-RP - Release to press;
-wpm - words per minute
+SAAS - Software as a service,
+PP - Press to press,
+RR - Release to release, 
+RP - Release to press,
+wpm - words per minute,
+RN - Rețele neurale, 
+BP - Backpropagation, 
+FP - funcție de potențial, 
+RBFN - Radial Basis Function Network,
+SVM - Suport Vector Machine, 
+ADP - Arbori de decizie paraleli, 
+GMM - Gaussian mixture models, 
+PCA - Principal Component Analysis
 \end{IEEEkeywords}
 
 
@@ -61,7 +69,7 @@ wpm - words per minute
 	Măsura biometrică a tastării este referită în literatură sub forma de dinamica apăsării tastelor („Keystroke dynamics”). Dinamica apăsării tastelor se referă la felul în care o persoană apasă tastele unei tastaturi. Această metodă este bazată pe caracteristicile de scriere ale persoanelor cum ar fi durata apăsării unei taste, latența dintre apăsări consecutive ale tastelor, timpul dintre două apăsări consecutive și în cazul în care se poate, forța apăsării. Cele mai folositoare metrici sunt: timpul de apăsare, acesta reprezintă durata de timp a menținerii unei taste apăsate și timpul de pauză, care reprezintă durata de timp dintre eliberarea unei chei și apăsarea alteia.
 
 
-\subsubsection{Istorie}	
+\subsubsection{Scurt istoric}	
 	Această metodă este derivată din ideea de indentificare a expeditorului unui cod Morse ce folosește un telegraf. Această tehnică a fost analizată în timpul celui de-al doilea război mondial și poartă numele de „fist of the sender” (pumnul expeditorului). Aceasta a fost utilizată cu succes pentru a monitoriza deplasarea trupelor pe baza recunoașterii tiparului de transmisie a expeditorului mesajului \cite{b2}.
 
 
@@ -124,7 +132,7 @@ wpm - words per minute
 	Alte caracteristici secundare care pot fi derivate din caracteristicile de timp sunt viteza de scriere, aceasta este măsurată în cuvinte pe minut (wpm), viteza maximă și cea minimă, media și deviația standard a caracteristicelor și entropia acestora.
 	
 
-\subsection{Metrici de performanță}
+\subsection{Metrici de performanță ale sistemului}
 	În procesul de autentificare/verificare, se extrag datele din șirul de caractere introdus de utilizator pentru a crea un model al modului de tastare. Acest model este apoi comparat cu unul existent pentru utilizatorul respectiv, creat în momentul înrolării în sistem. Pentru comparare se folosește un algoritm care determină cât este de similar modelul nou creat cu cel existent în baza de date. Iar pentru procesul de identificare, compararea realizată este un proces de tip one-to-many, acesta constă în compararea modelului nou creat cu toate modelele din baza de date pentru a realiza identificarea utilizatorul.
 	
 	Pentru determinarea preciziei unui sistem biometric de autentificare se utilizează două rate de eroare importante - Rata de respingere falsă ,FRR („False Rejection Rate”) și rata de acceptare falsă, Far („False Acceptance Rate”).
@@ -149,46 +157,41 @@ Unde: $f_n$ - numărul de respingeri false; $f_p$ - numărul de acceptări false
 	Uzual, pentru sisteme biometrice în care securitatea nu este o prioritate, se permit valori mai mari ale FAR-ului fază de cele ale FRR-ului însă în aplicații cu un nivel ridicat de securitate se preferă valori ridicate ale FRR-ului dar foarte scăzute lare FAR-ului. Cu cât este mai scăzută valoarea ERR-ului, cu atât sistemul biometric este mai performant.
 
 \subsection{Baze de date}
-% Enumerarea unor baze de date ce au fost achiziționate în medii controlate și în medii necontrolate.
 	Lipsa de standardizare a achiziției datelor reprezintă pentru acest tip de măsură biometică un impediment în dezvoltare. Adoptarea de standarde ar trebui să faciliteze schimbul de informații între cercetători  și să ofere o mai bună metodă de comparare a diferiților algoritmi. Astfel se va reduce cu siguranță duplicarea efortului depus.
-	În tabelul 1 sunt listate o parte din bazele de date făcute disponibile de anumiți cercetători. 
-\\
+	În tabelul 1 sunt listate o parte din bazele de date făcute disponibile de anumiți cercetători. \\
 
 \begin{table}[H]
 	\begin{tabular}[c]{lcccc}
 	\hline
-	Bază de date 							 & TT  &  S &       M \\
+	Bază de date 							 	   & TT  &   S &      M \\
 	
 	\hline
-	Jugurta and Freire   \cite{b8}      		   & S   & 32 &    320 \\ 
-	Jugurta and Freire   \cite{b8}      		   & D   & 15 &    150 \\ 
-	Killourhy and Maxion \cite{b9}      		   & S   & 51 &  20400 \\ 
-	Giot et al.			 \cite{b10}	    	 	   & S   &133 &   7555 \\ 
-	Allen				 \cite{b11}	    	 	   & S   &104 &   2379 \\ 
-	Bello et al.		 \cite{b12}	    	 	   & S   & 54 & 282020 \\ 
-	CMU \cite{b13}  					 	 	   & S   & 51 &  20400 \\
-	CMU Free vs. Transcribed Text \cite{b14} 	   & D/S & 20 & 	 - \\
-	BeiHang \cite{b15}						 	   & S   &117 &   2661 \\
-	Stonybrook  \cite{b16}					 	   & D   &196 & 	 - \\
-	Keystroke100 Dataset \cite{b17} \cite{b18}     & S   &100 &	  2000 \\
+	Jugurta and Freire   \cite{b8}      		   &   S &  32 &    320 \\ 
+	Jugurta and Freire   \cite{b8}      		   &   D &  15 &    150 \\ 
+	Killourhy and Maxion \cite{b9}      		   &   S &  51 &  20400 \\ 
+	Giot et al.			 \cite{b10}	    	 	   &   S & 133 &   7555 \\ 
+	Allen				 \cite{b11}	    	 	   &   S & 104 &   2379 \\ 
+	Bello et al.		 \cite{b12}	    	 	   &   S &  54 & 282020 \\ 
+	CMU \cite{b13}  					 	 	   &   S &  51 &  20400 \\
+	CMU Free vs. Transcribed Text \cite{b14} 	   & D/S &  20 & 	  - \\
+	BeiHang \cite{b15}						 	   &   S & 117 &   2661 \\
+	Stonybrook  \cite{b16}					 	   &   D & 196 & 	  - \\
+	Keystroke100 Dataset \cite{b17, b18}           &   S & 100 &   2000 \\
 	\hline
 	\end{tabular}
 	
 \caption{ 
-Baze de date făcute publice de anumite colective de cercetători.
-\\
-TT - tipul de text; S - Subiecți; M - mostre;
-\\
+Baze de date făcute publice de anumite colective de cercetători.\\
+TT - tipul de text; S - Subiecți; M - mostre;\\
 S - static; D - dinamic;
 }
 \end{table}
 
 \section{Abordări și rezultate}
-	Odată extrase caracteristicile și create modelele, clasificarea utilizatorilor este realizată pe baza asemănărilor și deosebirilor dintre aceste modele. În literatură s-au utilizat de la metode simple derivate din statistică cum ar fi media și deviația standard provenite din statisica până la metode complexe de recunoaștere a acestora pentru clasificarea scriitorului. Algoritmii de clasificare pot fi împărțiți în patru categorii \cite{b3}.
+	Ulterior extragerii caracteristicilor sunt realizate modele capabile să diferențieze utilizatorii pe baza acestora. Clasificarea utilizatorilor este realizată pe baza asemănărilor și deosebirilor dintre aceste modele. În literatură s-au utilizat de la metode simple derivate din statistică cum ar fi media și deviația standard provenite din statisica până la metode complexe de recunoaștere a acestora pentru clasificarea scriitorului. Algoritmii de clasificare pot fi împărțiți în trei categorii \cite{b3}.
 
 \subsection{Algoritmi statistici}
-	Cea mai simplă metodă statistică constă în calculul mediei și deviației standard ale caracteristicilor modelului. Acestea pot fi folosite pentru compararea utilizatorilor folosind diverse modalități de testare cum ar fi: testarea ipotezei, t-tests și folosirea distanțelor cum ar fi distanța absolută, distanța Euclideană și a altor tipuri de distanțe. În tabelul 2 pot fi vizualizate diverse abordări cu rezultatele acestora.
-\\
+	Cea mai simplă metodă statistică constă în calculul mediei și deviației standard ale caracteristicilor modelului. Acestea pot fi folosite pentru compararea utilizatorilor folosind diverse modalități de testare cum ar fi: testarea ipotezei, t-tests și folosirea distanțelor cum ar fi distanța absolută, distanța Euclideană și a altor tipuri de distanțe. În tabelul 2 pot fi vizualizate diverse abordări cu rezultatele acestora.\\
 
 \begin{table}[H]
 	\begin{tabular}[c]{lcccccccc}
@@ -207,15 +210,13 @@ S - static; D - dinamic;
 	\end{tabular}
 	
 \caption{
-TT - tipul de text; Env - mediu; S - Subiecți; M - mostre;
-\\
+Metode statistice utilizate și rezultate obținute \cite{b3}.\\
+TT - tipul de text; Env - mediu; S - Subiecți; M - mostre;\\
 S - static; D - dinamic; C - Controlat; N - Necontrolat.}
 \end{table}
 
 \subsection{Rețele neurale}
-	Rețelele neurale reprezintă mijloace de modelare statistică nelineară adaptivă, acestea sunt inspirate din interconexiunea biologică a neuronilor. Există două modalități în care ponderile pot fi asociate (învățate) - înățare supervizată și învățare nesupervizată. Pentru clasificarea măsurilor extrase din dinamica de apăsare a tastelor, în literatură s-au utilizat metode cum ar fi: perceptron, suma de produse (SOP), Adaline, arhitecturi de rețele neurale, backpropagation etc. \cite{b3}.
-	În urma testării diferitelor arhitecturi de rețele neurale cum ar fi backpropagation, suma de produse sau sumă de produse hibridă s-au obținut rate de identificare de până la 97.8\% \cite{b3}. În tabelul 3 sunt prezentate metrici de performanță pentru diverși algoritmi utilizați pentru realizarea comparației.
-\\
+	Rețelele neurale reprezintă mijloace de modelare statistică nelineară adaptivă, acestea sunt inspirate din interconexiunea biologică a neuronilor. Există două modalități în care ponderile pot fi asociate (învățate) - înățare supervizată și învățare nesupervizată. Pentru clasificarea măsurătorilor extrase din dinamica de apăsare a tastelor, în literatură s-au utilizat metode cum ar fi: perceptron, suma de produse (SOP), Adaline, arhitecturi de rețele neurale, backpropagation etc. \cite{b3}. În tabelul 3 sunt prezentate metrici de performanță pentru diverși algoritmi utilizați pentru realizarea comparației.\\
 
 \begin{table}[H]
 	\begin{tabular}[c]{lcccccccc}
@@ -224,34 +225,77 @@ S - static; D - dinamic; C - Controlat; N - Necontrolat.}
 	\cline{6-8}
             &    &     &   &   &  FAR & FRR & EER \\
 	\hline
-	Perceptron	      & S & C &  24 & 1400 &   8   &  9 & - \\
-	Adaline (RN)	  & S & C &  46 & 1867 & 17.4  &  0 & - \\
-	Rețele neurale	  & S & C &  15 & 2100 &  8    &  7 & - \\
-	BP-RN			  & S & C & 151 &    - &  1.11 &  0 & - \\
+	Perceptron	     				& S & C &  24 & 1400 &  8      &  9    & - \\
+	Adaline (RN)	  				& S & C &  46 & 1867 & 17.4    &  0    & - \\
+	Rețele neurale	  				& S & C &  15 & 2100 &  8      &  7    & - \\
+	Rețele neurale	  				& D & C &  22 &    - &  0.015  &  4.82 & - \\
+	BP-RN			  				& S & C & 151 &    - &  1.11   &  0    & - \\
+	FP-RN							& S & C &  30 & 6750 &  2.2    &  4.7  & - \\
+	BP-RN			  				& S & C & 151 &    - &  1.11   &  0    & - \\
+	RBFN			  				& S & C &  30 &  180 &  2      &  -    & - \\
 	
 	\hline
 	\end{tabular}
 	
 \caption{
-TT - tipul de text; Env - mediu; S - Subiecți; M - mostre;
-\\
-S - static; D - dinamic; C - Controlat; N - Necontrolat.}
+Rezultate obținute în urma utilizării diverselor arhitecturi de rețele neurale \cite{b3}.\\
+TT - tipul de text; Env - mediu; S - Subiecți; M - mostre;\\
+S - static; D - dinamic; C - Controlat; N - Necontrolat;\\
+RN - Rețele neurale, BP - Backpropagation, FP - funcție de potențial, RBFN - Radial Basis Function Network.
+}
 \end{table}
 
 
-\section{Factori ce afectează performanța sistemului}
-	Deși teoretic nu se poate copia tiparul de scriere al unui utilizator, în practică s-a demonstrat că parolele cu puține caractere pot fi imitate cu succes. O bună analogie poate fi realizată cu semnătura realizată de o persoană cu o ustensilă de scris. Aceasta cu cât este mai complexă, cu atât este mai greu de replicat. În concluzie este necesară o parolă suficient de complexă pentru a nu putea fi falsificată cu ușurință. De asemenea, utilizarea unei parole complexe, permite o mai bună analiză a utilizatorului în momentul înrolării în sistem. 
+\subsection{Recunoaștere de tipare}
+	Recunoașterea de tipare constă în clasificarea în diverse categorii a tiparelor sau a obiectelor folosind diverși algoritmi. Acesta utilizează de la algoritmi simpli de învățare precum „nearst neighbor”, clusterizare până la algoritmi mult mai complecși de analiză a datelor („data mining”) cum ar fi clasificatorii Bayes, discriminantul linear Fisher (FLD), support vector machine (SVM) și teoria grafurilor. Unul dintre cele mai mari avantaje alte utilizării algoritmilor de învățare probabilistici constă în faptul că aceștia oferă asociază o valoare de încredere deciziei luate. Aceștia pot de asemenea să reducă problemele introduse de propagările de eroare prin ignorarea răspunsurilor cu o valoare scăzută de încredere. În tabelul 4 sun prezentate rezultate obținute utilizând aceste metode. 
 	
+
+\begin{table}[H]
+	\begin{tabular}[c]{lcccccccc}
+	\hline
+	\multirow{2}{*}{Clasificare} & \multirow{2}{*}{TT} & \multirow{2}{*}{Env} & \multirow{2}{*}{S} & \multirow{2}{*}{M} & \multicolumn{3}{c}{Error rate (\%)} \\
+	\cline{6-8}
+            &    &     &   &   &  FAR & FRR & EER \\
+	\hline
+	SVM	             				& S & C &  10 &    - & 0.02 &  0.1   & - \\
+	SVM	             				& S & C &  16 & 9600 & 0.69 &  0.1   & - \\
+	SVM	\& AG          				& S & C &  16 & 9600 & 0.69 &  0.1   & - \\
+	Random Forest	  				& S & U &  41 & 8775 & 3.2  &  5.5   & - \\
+	ADP								& S & U &  43 &  387 & 0.88 &  9.62  & - \\
+	GMM				  				& S & U &   8 &   80 & 2.1  &  2.4   & - \\
+	PCA 	 		  				& S & C &  25 & 2400 & -    &  -     & - \\
+	Logică Fuzzy	  				& S & C &  10 &  200 & 3.4  &  2.9   & - \\
+	
+	\hline
+	\end{tabular}
+	
+\caption{
+Rezultate obținute în urma utilizării diverșilor algoritmi de recunoaștere a tiparelor \cite{b3}.\\
+TT - tipul de text; Env - mediu; S - Subiecți; M - mostre;\\
+S - static; D - dinamic; C - Controlat; N - Necontrolat;
+SVM - Suport Vector Machine, AG - Algoritm genetic, ADP - Arbori de decizie paraleli, GMM - Gaussian mixture models, PCA - Principal Component Analysis.
+}
+\end{table}
+
+
+
+\section{Factori ce afectează performanța sistemului}
 	În cazul scrierii libere, o problemă pentru utilziatorul normal o reprezintă variația vitezei de scriere. S-au observat variații puternice în compararea aceluiași utilizator care realizează scriere liberă și scierea unui text static predefinit. Un motiv al acestei variații o reprezintă latența introdusă de incertitudinea în planificarea datelor ce urmează a fi scrise. În schimb, la dactilografii profesioniști s-a remarcat o bună comparare a celor două cazuri\cite{b3}.
 	
 	Starea emoțională a utilizatorului poate influența viteza de scriere. S-a observat o scădere de 70\% a vitezei de scriere în cazul subiecților cu o stare negativă și o creștere de 83\% în cazul utilizatorilor care au o stare pozitivă \cite{b3}. De asemenea, viteza de scriere mai poate fi influențată și de starea de sănătate, poziția în care se realizează tastarea.
-	%%%%
+
+	Deși teoretic nu se poate copia tiparul de scriere al unui utilizator, în practică s-a demonstrat că parolele cu puține caractere pot fi imitate cu succes. O bună analogie poate fi realizată cu semnătura realizată de o persoană cu o ustensilă de scris. Aceasta cu cât este mai complexă, cu atât este mai greu de replicat. În concluzie este necesară o parolă suficient de complexă pentru a nu putea fi falsificată cu ușurință. De asemenea, utilizarea unei parole complexe, permite o mai bună analiză a utilizatorului în momentul înrolării în sistem. 
+	
+
+\section{Concluzii}
+	Se poate realiza un sistem suficient de precis pentru a adăuga un nou start de securitate împotriva amenințărilor la adresa securității. Această metodă bazându-se pe o măsură biometrică psihică, nu poate fi însușită de alte persoane. În această cercetare au fost prezentate tehnicile de achiziție și metricile achiziționate, s-au prezentat rezultate obținute în literatură la aplicarea anumitor metode de analiză și comparare a datelor.Analiza dinamicii tastării textului liber reprezintă un domeniu puțin studiat care are potențial pentru diverse aplicații SAAS.
+
 
 \begin{thebibliography}{00}
 
 \bibitem{b1} https://www.internetworldstats.com/stats.htm
 
-\bibitem{b2} L. F. Coppenrath and Associates. „Biopassword Technology Overview”, http://www.lfca.net/Reference\%20Documents/Biometric\%20Solutions\%20By\%20Classification.pdf
+\bibitem{b2} L. F. Coppenrath and Associates. „Biopassword Technology Overview”, http://www.lfca.net/Reference\%20Documents/Biometric\%20Solutions \%20By\%20Classification.pdf
 
 \bibitem{b3} Salil P. Banerjee, Damon L. Woodard: „ Biometric Authentication and Identification using Keystroke Dynamics: A Survey”
 
@@ -261,7 +305,7 @@ S - static; D - dinamic; C - Controlat; N - Necontrolat.}
 
 \bibitem{b6} K. S. Balagani, V. V. Phoha, A. Ray, and S. Phoha. On the Discriminability of Keystroke Feature Vectors Used in Fixed Text Keystroke Authentication. Pattern Recognition Letters, 32:10701080, 2011.
 
-\bibitem{b7} TODO: TBRSD - Curs de adăugat ref
+\bibitem{b7} Burileanu Dragoș, „Tehnologii biometrice. Recunoaşterea semnăturii dinamice.”
 
 \bibitem{b8} Jugurta R.M.F. and Freire O.E. On the equalization of keystroke timing histograms. Pattern Recognition Letters, 27:1440–1446, October 2006.
 
