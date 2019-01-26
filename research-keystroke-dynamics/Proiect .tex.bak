@@ -11,6 +11,7 @@
 \usepackage{multirow}
 \usepackage{float}
 \usepackage{caption}
+\usepackage{commath}
 
 \restylefloat{table}
 
@@ -140,13 +141,13 @@ PCA - Principal Component Analysis
 
 FRR reprezintă probabilitatea ca un sistem biometric să nu recunoască identitatea unui utilizator autorizat. Se definește ca fiind raportul dintre numărul de respingeri false și numărul total de încercări legitime de identificare a unui utilizator autentificat \cite{b7}.
 
-\begin{equation} \label{eq2}
+\begin{equation} \label{eq1}
 FRR = \frac{f_n}{t_p + f_n}
 \end{equation}
 
 FAR reprezintă probabilitatea ca un sistem biometric să confirme în mod eronat identitatea unui utilizator neautorizat. Se definește ca fiind raportul dintre numărul de acceptări false și numărul total de încercări de identificare a unui impostor \cite{b7}.
 
-\begin{equation} \label{eq1}
+\begin{equation} \label{eq2}
 FAR = \frac{f_p}{t_n + f_p}
 \end{equation}
 
@@ -277,6 +278,91 @@ SVM - Suport Vector Machine, AG - Algoritm genetic, ADP - Arbori de decizie para
 }
 \end{table}
 
+\section{Introducere detectori de caracteristici}
+	În continuare vor fi prezentați succit un număr de detectori utilizați în literatură. Aceștia necesită o fază de antrenare în care se utilizează seturi de date de la utilizatorul original pentru a putea realiza un model caracteristic al acestuia. Ulterior etapei de antrenare are loc o etapă de testare în care se compară rezultatele obținute în urma folosirii acestui modelul pentru a compara seturi de date venite atât de la utilizatorul original cât și de la alți utilizatori.
+	
+\subsection{Euclidean}
+	Acesta algoritm este folosit pentru a modela fiecare șir de caractere sub forma unui punct în spațiul p-dimensional, unde p reprezintă numărul de caracteristici din vectorul de timpi. Acesta tratează datele de antrenare ca pe un nor de puncte, calculul gradului de similitudine pentru un vector de test fiind calculat în funcție de distanța acestuia față de centrul norului de puncte. Specific etapei de antrenare este calculul unui vector mediu pentru vectorii de timp ai utilizatorului iar în faza de testare, scorul este calculat în funcție de distanța Euclidiană dintre vectorul mediu și vectorul de test.
+	
+	Fie $x = [x_1,x_2, ..., x_n]$ vectorul mediu calculat în faza de antrenare și $y = [y_1,y_2, ..., y_n]$ vectorul testat, atunci distanța Euclidiană este dată de formula 3.
+	
+\begin{equation}  \label{eq3}
+	dist_E(a, b) = \sqrt{\sum\limits_{i}^n(x_i - y_i)^2}
+\end{equation}
+
+\subsection{Euclidean (normată)}
+	Acest detector se mai numește și „clasificatorul de distanță minimă normalizat” \cite{b13}. În etapa de antrenare, vectorul mediu de valori este calculat, întocmai ca la detectorul Euclidean. Faza de testare este de asemenea similară, diferența constă în faptul că distanța rezultată este normată la produsul normelor celor doi vectori \cite{b13}.
+	
+	Fie $x$ vectorul mediu, $y$ vectorul testat și $d$ distanța Euclideană, atunci scorul rezultat va fi dat de formula (4).
+
+\begin{equation}  \label{eq4}
+	S = \frac{d}{\norm{x}_1 \norm{y}_1}
+\end{equation}
+
+	Unde $\norm{x}_1$ este calculat cu formula (5).
+\begin{equation}  \label{eq5}
+	\norm{x}_k = (\sum\limits_{i}^n |v_i|^k)^{1/k}
+\end{equation}
+
+\subsection{Manhattan}
+	Acest algoritm este similar cu detectorul Euclidean cu excepția că distanța nu este Euclidiană ci Manhattan (sau „city-block”). În faza de antrenare se realizează vectorul de antrenare prin medierea vectorilor de timp iar în faza de testare, scorul este calculat pe baza distanței Manhattan dintre vectorul mediu și vectorul de test.
+	
+		Fie $x$ vectorul mediu, $y$ vectorul testat, atunci distanța Manhattan dintre acștia este dat de formula (6).
+		
+\begin{equation}  \label{eq6}
+	dist_{Man} = \sum\limits_{i}^n |x_i - y_i|
+\end{equation}
+
+\subsection{Manhattan (filtrată)}
+	Metoda filtrată este similă cu cea Manhattan originală, diferind de acesta prin faptul că valorile extreme sunt filtrate în etapa de antrenare.  Pentru aceasta se calculează deviația standard a fiecărui element, pe baza acesteia sunt eliminate valorile care sunt mai mari decât suma dintre media și de trei ori valoarea deviației standar. Eliminarea valorilor extreme conduce la obținerea unui vector mediu de valori mai precis. Testarea se execută similar metodei nefiltrate, folosindu-se calculul distanței Manhattan dintre valorile vectorului mediu și velorile vectorilor testați.
+
+\subsection{Manhattan (scalată)}
+	În etapa de antrenare se calculează doi vectori. Unul este cel al valorilor medii ale datelor de antrenare de la utilizator iar celălalt reprezintă deviația absolută medie a fiecărui element. În faza de testare, se procedează similar ca în cazul metodei clasice doar că valorile absolute ale diferenței dintre elementele vectorului mediu și elementele vectorului testat sunt scalate la deviația absolută medie a elementului respectiv calculată la momentul antrenării. Pentru clarificare este prezentată următoarea exemplificare.
+	
+	Fie $x$ vectorul mediu de calori și $a$ vectorul de deviații absolute medii asociate valorilor vectorului $x$ iar $y$ vectorul testat. Avem următoarea formulă de calcul a distanței dintre aceștia, formula (7).
+	 
+\begin{equation}  \label{eq7}
+	dist_{Man} = \sum\limits_{i}^n \frac{|x_i - y_i|}{a_i}
+\end{equation}
+	
+\subsection{Mahalanobis}
+	Metoda Mahalanobis seamănă cu cei doi detectori prezentați anterior (Euclidian și Manhattan) dar calculul distanței este mai complicat. Distanța Mahalanobis poate fi văzută ca o extensie a distanței Euclidiene privind corelația dintre caracteristici. În faza de antrenare, sunt calculați vectorul mediu de valori al datelor de antrenare precum și matricea de covariație a acestora. În faza de testare, scorul este calculat între vectorul mediu și cel de test în felul următor:
+	
+	Dacă $x$ este vecorul de valori medii obținut la antrenare iar $y$ vectorul de test și $S$ matricea de covariație, distanța Mahalanobis, formula (8)
+
+\begin{equation}  \label{eq8}
+	dist_{Mh} = (x - y)^T S^{-1}(x - y)
+\end{equation}
+
+\subsection{Mahalanobis (Normată)}
+	Acest detector mai este numit și clasificatorul Bleha normat \cite{13}. Partea de antrenare este identică cu cea a detectorului Mahalanobis. Diferența constă în procesul de testare, scorul fiind calculat prin normarea distanței Mahalobis folosind același divizor ca în cazul distanței Euclidiene normate.
+	
+\subsection{Cel mai apropiat vecin (Mahalanobis)}
+	Cunoscută în literatură sub denumirea de „Nearest-neighbor”, acest algoritm saleaveză vectorii de antrenare și calculează matricea de covariație a acestora. Pentru testare detectorul calculează distanța Mahalanobis dintre toți vectorii de antrenare și cei de testare. Scorul final fiind dat de distanța de la vectorul de test la cel mai apropiat vector de antrenare.
+	
+\subsection{Rețele neurale (standard)}
+	Acest detector este alcătuit dintr-o rețea neurală cu feed-forward antrenată cu algoritmul „back-propagation”. În faza de antrenare, o rețea este construită cu $p$ noduri de intrare, un nod de ieșire și $[2p/3]$ noduri ascunse. Detectorul este constituit din 6 noduri de intrare și 4 noduri ascune deoarece s-au considerat doar vectori de date a câte 6 caracteristici. Vectorii utilizați pentru antrenare în cazul \cite{13} sunt constituiți din 31 de caracteristici astfel fiind nevoie de o extindere a modelului inițial utilizat pentru a suporta 31 de noduri de intrare în timp ce se menține rata de două noduri ascune pentru fiecare 3 noduri de intrare.
+	
+	Ponderile rețelei au fost toate inițializate cu valoarea $0.1$, și bias-ul a fost inițializat cu valori aleatoare. Detectorul a fost antrenat pentru a produce $1.0$ pe nodul de ieșire pentru fiecare vector de testare. S-au antrenat 500 de generații folosind rata de învațare egală cu $0.0001$. Pe parcursul procesului de testare, vectorii testați au fost trecuți prin rețea și s-au înregistrat valorile produse la ieșirea din rețea\cite{13}. 
+	
+	Dacă $s$ reprezintă ieșirea rețelei, atunci scorul a fost calculat ca fiind $1 - s$ deoarece $s$ are valori apropiate de $1.0$  pentru vectorii de test similari cu vectorii de antrenare și apropiate de $0.0$ în cazul vectorilor diferiți.
+
+\subsection{Rețele neurale (auto-asoc)}
+	Acest tip de arhitectură mai este referit ca fiind „auto-asociativ, perceptron multistrat”. Incorporează de asemenea rețeaua neurală cu feed-forward antrenată folosind algoritmul de „back-propagation” dar spre deosebire de structura clasică a rețelei neurale este concepută pentru a fi folosită ca detector de diferențe\cite{13}. Faza de antrenare învață rețeaua să producă vectori de ieșire apropiați de valorile intrării pentru vectorii de antrenare (de aceea denumirea de descriptor auto-asociativ). Apoi pe parcursul fazei de testare, se obțin scoruri mari pentru vectorii de test ce diferă de cei folosiți în procesul de antrenare și invers pentru cei similari.
+
+\subsection{Logică fuzzy}
+	Acest detecor incorporează o procedură de deducție bazată pe logica fuzzy. Pricipiul de bază al acestui algoritm constă în împărțirea în seturi fuzzy (permisive, de exemplu timpii cuprinși între 210 și 290 milisecunde fac parte dintr-un set numit „foarte rapid”). Seturile sunt numite fuzzy deoarece elementele acestora pot să aparțină parțial unui set (de exemplu durata de 255 de milisecunde aparține cu precis de acest se în timp ce valorile existente mai spre extremități pot să aparțină parțial de aceste seturi cum ar fi valoarea 290 pentru setul considerat anterior).
+	
+	În etapa de antrenare, detectorul determină cât de puternic aparține fiecare caracteristică anumitor seturi și marchează caracteristicile cu indicele setului de care aparțin cel mai puternic. În etapa de testare verifică dacă apartenența fiecărei caracteristici de timp este aceeași cu cea a setului de date de antrenare. Scorul asociat este alcătuit din valoarea medie a lipsei apartenenței membrilor vectorului la o anumită clasă \cite{b13}. 
+	
+\subsection{Z-score}
+	Acest detector reprezintă o tehnică statistică. În faza de antrenare, detectorul calculează media și deviația standar a fiecărui vector de timp. În faza de testare, acesta calculează valoarea absolută z-score a fiecărui vector de date de test.
+	
+	Dacă $x$ este vecorul de valori medii și $s$ reprezintă valorile deviației standar obținute la antrenare iar $y$ vectorul de test, valoarea scorului z este calculată cu formula (9).
+	
+\begin{equation}  \label{eq9}
+	S_z = \frac{|x_i - y_i|}{s_i}
+\end{equation}
 
 
 \section{Factori ce afectează performanța sistemului}
@@ -289,6 +375,8 @@ SVM - Suport Vector Machine, AG - Algoritm genetic, ADP - Arbori de decizie para
 
 \section{Concluzii}
 	Se poate realiza un sistem suficient de precis pentru a adăuga un nou start de securitate împotriva amenințărilor la adresa securității. Această metodă bazându-se pe o măsură biometrică psihică, nu poate fi însușită de alte persoane. În această cercetare au fost prezentate tehnicile de achiziție și metricile achiziționate, s-au prezentat rezultate obținute în literatură la aplicarea anumitor metode de analiză și comparare a datelor.Analiza dinamicii tastării textului liber reprezintă un domeniu puțin studiat care are potențial pentru diverse aplicații SAAS.
+
+
 
 
 \begin{thebibliography}{00}
